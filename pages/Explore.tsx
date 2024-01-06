@@ -36,7 +36,7 @@ const Explore: NextPage = () => {
       <Head>
         <title>dazzlone • Explore</title>
         <meta name="description" content="Instagram Clone" />
-        <link rel="icon" href="/instagram.png" />
+        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       <Header page="" />
       <div className="mx-auto my-16 w-full max-w-[600px] bg-white dark:bg-[#1c1c1c]">

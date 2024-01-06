@@ -11,7 +11,7 @@ export default function UserDoesNotExist({
       <Head>
         <title>Profile • dazzlone photos and videos</title>
         <meta name="description" content="Instagram Clone" />
-        <link rel="icon" href="/instagram.png" />
+        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       <Header page="Profile" />
       <div className="items-top flex h-full w-full justify-center">
