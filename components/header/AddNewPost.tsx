@@ -21,6 +21,7 @@ function AddNewPost({
   const [loading, setLoading] = React.useState(false);
 
   return (
+    
     <div
       className="fixed top-0 z-10 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
       onClick={(e: any) => {
@@ -109,6 +110,7 @@ function AddNewPost({
               </div>
             ) : (
               <div>
+                
                 <h1 className="border-b border-stone-300 py-5 text-center font-semibold dark:border-stone-700">
                   Create new post
                 </h1>

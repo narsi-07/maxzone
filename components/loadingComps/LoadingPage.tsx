@@ -11,7 +11,7 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
       } flex h-screen w-full dark:bg-[#131313]  dark:[color-scheme:dark]`}
     >
       <Head>
-        <title>Dazzlone</title>
+        <title>ShareTrendy</title>
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>

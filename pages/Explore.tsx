@@ -34,7 +34,7 @@ const Explore: NextPage = () => {
     dark:text-slate-100 dark:[color-scheme:dark]"
     >
       <Head>
-        <title>dazzlone • Explore</title>
+        <title>ShareTrendy • Explore</title>
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>

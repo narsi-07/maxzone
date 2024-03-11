@@ -119,7 +119,7 @@ useEffect(() => {
   return (
     <div className="h-[100vh] overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
-        <title>Profile • dazzlone photos and videos</title>
+        <title>Profile • ShareTrendy photos and videos</title>
         <meta name="description" content="Dazzlone, social media app dazzlone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>

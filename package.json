@@ -2,11 +2,13 @@
   "name": "instagram-clone",
   "version": "0.1.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "@types/firebase": "^3.2.1",
@@ -33,7 +35,9 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
+    "react-sitemap-generator": "^1.1.6",
     "tailwindcss": "^3.1.6",
     "typescript": "^5.3.2"
   }
+  
 }

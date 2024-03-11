@@ -33,7 +33,7 @@ const Inbox: NextPage = () => {
   return (
     <div className="h-screen cursor-default overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
-        <title>dazzlone • Chats</title>
+        <title>ShareTrendy • Chats</title>
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
@@ -93,7 +93,7 @@ const Inbox: NextPage = () => {
           )}
 
         </div>
-        <button type='button' id='chatbottonn' className={`${move ? 'moving':''} activee`} onClick={()=>setmove(!move)}>⟪ ⟫</button>
+        <button type='button' id='chatbottonn' className={`${move ? 'moving':''} activee`} onClick={()=>setmove(!move)}>👁️</button>
 
       </div>
     </div>
