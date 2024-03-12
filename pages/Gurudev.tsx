@@ -1,56 +1,119 @@
-import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { useEffect } from 'react';
 
-const TradingViewWidget = () => {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
+const BitcoinPriceChartWidget = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://s3.tradingview.com/tv.js';
+    script.src =
+      'https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js';
     script.async = true;
+    script.innerHTML = `{
+      "title_raw": "Cryptocurrencies",
+      "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
+      "gridLineColor": "rgba(233, 233, 234, 1)",
+      "scaleFontColor": "rgba(218, 221, 224, 1)",
+      "title": "Cryptocurrencies",
+      "tabs": [
+        {
+          "title_raw": "Overview",
+          "symbols": [
+            { "s": "BITFINEX:BTCUSD" },
+            { "s": "BITFINEX:ETHUSD" },
+            { "s": "BITFINEX:XRPUSD" },
+            { "s": "COINBASE:BCHUSD" },
+            { "s": "COINBASE:LTCUSD" },
+            { "s": "BITFINEX:IOTUSD" }
+          ],
+          "title": "Overview"
+        },
+        {
+          "title_raw": "Bitcoin",
+          "symbols": [
+            { "s": "BITFINEX:BTCUSD" },
+            { "s": "COINBASE:BTCEUR" },
+            { "s": "COINBASE:BTCGBP" },
+            { "s": "BITFLYER:BTCJPY" },
+            { "s": "WEX:BTCRUR" },
+            { "s": "CME:BTC1!" }
+          ],
+          "title": "Bitcoin"
+        },
+        {
+          "title_raw": "Ripple",
+          "symbols": [
+            { "s": "BITFINEX:XRPUSD" },
+            { "s": "KRAKEN:XRPEUR" },
+            { "s": "KORBIT:XRPKRW" },
+            { "s": "BITSO:XRPMXN" },
+            { "s": "BINANCE:XRPBTC" },
+            { "s": "BITTREX:XRPETH" }
+          ],
+          "title": "Ripple"
+        },
+        {
+          "title_raw": "Ethereum",
+          "symbols": [
+            { "s": "COINBASE:ETHUSD" },
+            { "s": "KRAKEN:ETHEUR" },
+            { "s": "KRAKEN:ETHGBP" },
+            { "s": "KRAKEN:ETHJPY" },
+            { "s": "POLONIEX:ETHBTC" },
+            { "s": "WEX:ETHLTC" }
+          ],
+          "title": "Ethereum"
+        },
+        {
+          "title_raw": "Bitcoin Cash",
+          "symbols": [
+            { "s": "COINBASE:BCHUSD" },
+            { "s": "BITSTAMP:BCHEUR" },
+            { "s": "CEXIO:BCHGBP" },
+            { "s": "POLONIEX:BCHBTC" },
+            { "s": "HITBTC:BCHETH" },
+            { "s": "WEX:BCHLTC" }
+          ],
+          "title": "Bitcoin Cash"
+        }
+      ],
+      "plotLineColorFalling": "rgba(255, 74, 104, 1)",
+      "plotLineColorGrowing": "rgba(60, 188, 152, 1)",
+      "showChart": true,
+      "title_link": "/markets/cryptocurrencies/prices-all/",
+      "locale": "en",
+      "symbolActiveColor": "rgba(242, 250, 254, 1)",
+      "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
+      "height": 660,
+      "width": 400
+    }`;
     document.body.appendChild(script);
-
-    script.onload = () => {
-      setScriptLoaded(true);
-    };
-
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
-  useEffect(() => {
-    if (scriptLoaded) {
-      const widget = new (window as any).TradingView.widget({ // Type assertion to any
-        width: '100%',
-        height: window.innerHeight,
-        symbol: 'COINBASE:BTCUSD',
-        interval: '1',
-        timezone: 'Etc/UTC',
-        theme: 'dark',
-        style: '1',
-        locale: 'en',
-        toolbar_bg: '#f1f3f6',
-        enable_publishing: false,
-        hide_side_toolbar: false,
-        allow_symbol_change: true,
-        details: true,
-        studies: [
-          'BB@tv-basicstudies',
-          'Volume@tv-basicstudies',
-          'VWAP@tv-basicstudies'
-        ],
-        container_id: 'tradingview_0b60e'
-      });
-      console.log(widget)
-    }
-  }, [scriptLoaded]);
-
   return (
-    <div className="tradingview-widget-container">
-      <div id="tradingview_0b60e"/>
-    </div>
+    <>
+      <Head>
+        <title>Bitcoin Price Chart Widget</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Check the live Bitcoin price chart and cryptocurrency market overview."
+        />
+        <meta
+          name="keywords"
+          content="Bitcoin, cryptocurrency, price chart, live chart, trading, finance"
+        />
+        <meta name="author" content="Your Name" />
+      </Head>
+      <div className="style">
+        <div className="tradingview-widget-container">
+          <div className="tradingview-widget-container__widget"/>
+        /</div>
+      </div>
+    </>
   );
 };
 
-export default TradingViewWidget;
+export default BitcoinPriceChartWidget;
