@@ -1,200 +1,67 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import Header from '../components/header/Header';
+import React, { useState, useEffect } from 'react';
 
+interface TradingViewWindow extends Window {
+  TradingView?: any;
+} 
 
-const Gurudev = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [isSending, setIsSending] = useState(false);
-  const [messages, setMessages] = useState([
-    { type: 'rchat', text: 'Hii dear, you can ask me any question !' },
-  ]);
-  const settimeout: null = null;
-  const setnewtimeout:  null = null;
-  const appendTypingAnimation = () => {
-    // Clear existing "Typing..." messages
-    setMessages((prevMessages) => prevMessages.filter(msg => msg.text !== 'Typing...'));
-
-    // Add new "Typing..." message
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { type: 'rchat', text: 'Typing...' },
-    ]);
-  };
-  const handleSendMessage = async () => {
-    if (inputValue.trim() !== '') {
-      setIsSending(true);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { type: 'schat', text: inputValue },
-      ]);
-      setInputValue('');
-      // Simulate typing animation
-      appendTypingAnimation();
-
-      try {
-        const response = await fetch(
-          `https://WellinformedHeavyBootstrapping.yasirmecom.repl.co/ask?question=users,${encodeURIComponent(
-            inputValue
-          )}`
-        );
-
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-
-        let responseData: any;
-
-        // Check if the response has the 'content-type' header and it's JSON
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.includes('application/json')) {
-          responseData = await response.json();
-        } else {
-          // If not JSON, handle plain text or other formats
-          responseData = { answer: await response.text() };
-        }
-
-        console.log('API Response Data:', responseData);
-        if (setnewtimeout) {
-          clearTimeout(setnewtimeout);
-        }
-
-        // Remove typing animation and display AI response
-        setMessages((prevMessages) => [
-          ...prevMessages.filter(msg => msg.text !== 'Typing...'), // Remove all "Typing..." messages
-          { type: 'rchat', text: responseData.answer },
-        ]);
-
-        setIsSending(false);
-      } catch (error) {
-        console.error('Error during API call:', error);
-
-        // Display an error message
-        setMessages((prevMessages) => [
-          ...prevMessages.filter(msg => msg.text !== 'Typing...'), // Remove all "Typing..." messages
-          { type: 'rchat', text: 'An error occurred during the API call.' },
-        ]);
-
-        setIsSending(false);
-      }
-    }
-
-    setInputValue('');
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-
-
-
-
-
+const TradingViewWidget = () => {
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [widgetLoaded, setWidgetLoaded] = useState(false);
 
   useEffect(() => {
-    if (messages) {
-      if (settimeout) {
-        clearTimeout(settimeout);
-      }
-      if (setnewtimeout) {
-        clearTimeout(setnewtimeout);
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/tv.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      setScriptLoaded(true);
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scriptLoaded && !widgetLoaded) {
+      if ((window as TradingViewWindow).TradingView && (window as TradingViewWindow).TradingView.widget) {
+        const Widget = (window as TradingViewWindow).TradingView.widget; // Capitalizing Widget
+        const widget = new Widget({
+          width: '100%',
+          height: window.innerHeight,
+          symbol: 'COINBASE:BTCUSD',
+          interval: '1',
+          timezone: 'Etc/UTC',
+          theme: 'dark',
+          style: '1',
+          locale: 'en',
+          toolbar_bg: '#f1f3f6',
+          enable_publishing: false,
+          hide_side_toolbar: false,
+          allow_symbol_change: true,
+          details: true,
+          studies: [
+            'BB@tv-basicstudies',
+            'Volume@tv-basicstudies',
+            'VWAP@tv-basicstudies'
+          ],
+          container_id: 'tradingview_0b60e'
+        });
+        console.log(widget);
+        setWidgetLoaded(true);
+      } else {
+        console.error('TradingView Widget not available.');
       }
     }
-  }, [settimeout, setnewtimeout, messages]);
+  }, [scriptLoaded, widgetLoaded]);
 
   return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
-          rel="stylesheet"
-        />
-        {/* <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> */}
-      </Head>
-      <Header page="Gurudev" />
-      <main>
-        <div className="topper">
-          {/* <div className="icon"></div> */}
-          <span  className='dazzle'><img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" />Dazzlone <div className='gurudevtick'>  <svg
-      version="1.1"
-      width="20"
-      height="20"
-      viewBox="0 0 256 256"
-      xmlSpace="preserve"
-      dangerouslySetInnerHTML={{
-        __html: `
-          <defs></defs>
-          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-            <path d="M 49.66 1.125 L 49.66 1.125 c 4.67 -2.393 10.394 -0.859 13.243 3.548 l 0 0 c 1.784 2.761 4.788 4.495 8.071 4.66 l 0 0 c 5.241 0.263 9.431 4.453 9.694 9.694 v 0 c 0.165 3.283 1.899 6.286 4.66 8.071 l 0 0 c 4.407 2.848 5.941 8.572 3.548 13.242 l 0 0 c -1.499 2.926 -1.499 6.394 0 9.319 l 0 0 c 2.393 4.67 0.859 10.394 -3.548 13.242 l 0 0 c -2.761 1.784 -4.495 4.788 -4.66 8.071 v 0 c -0.263 5.241 -4.453 9.431 -9.694 9.694 h 0 c -3.283 0.165 -6.286 1.899 -8.071 4.66 l 0 0 c -2.848 4.407 -8.572 5.941 -13.242 3.548 l 0 0 c -2.926 -1.499 -6.394 -1.499 -9.319 0 l 0 0 c -4.67 2.393 -10.394 0.859 -13.242 -3.548 l 0 0 c -1.784 -2.761 -4.788 -4.495 -8.071 -4.66 h 0 c -5.241 -0.263 -9.431 -4.453 -9.694 -9.694 l 0 0 c -0.165 -3.283 -1.899 -6.286 -4.66 -8.071 l 0 0 C 0.266 60.054 -1.267 54.33 1.125 49.66 l 0 0 c 1.499 -2.926 1.499 -6.394 0 -9.319 l 0 0 c -2.393 -4.67 -0.859 -10.394 3.548 -13.242 l 0 0 c 2.761 -1.784 4.495 -4.788 4.66 -8.071 l 0 0 c 0.263 -5.241 4.453 -9.431 9.694 -9.694 l 0 0 c 3.283 -0.165 6.286 -1.899 8.071 -4.66 l 0 0 c 2.848 -4.407 8.572 -5.941 13.242 -3.548 l 0 0 C 43.266 2.624 46.734 2.624 49.66 1.125 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,131,249); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-            <polygon points="36.94,66.3 36.94,66.3 36.94,46.9 36.94,46.9 62.8,35.34 72.5,45.04 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,119,227); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-            <polygon points="36.94,66.3 17.5,46.87 27.2,37.16 36.94,46.9 60.11,23.7 69.81,33.39 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-          </g>
-        `,
-      }}
-    /></div></span>
-        </div>
-        <div className="msgs_cont">
-          <ul id="list_cont">
-            {messages.map((message) => (
-              <li key={message.type} className={message.type}>
-                {message.text}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="bottom">
-          <div id="input">
-            <input
-              type="text"
-              id="txt"
-              placeholder="Send a message"
-              value={inputValue}
-              onChange={handleInputChange}
-              onKeyPress={handleKeyPress}
-            />
-            <button
-            type='button'
-              className="send-btn"
-              onClick={handleSendMessage}
-              disabled={isSending}
-            >
-              <h1 className='Sendcolor'> Send</h1>
-            </button>
-          </div>
-        </div>
-      </main>
-      <style>{`
-        .name {
-          font-size: 36px;
-        }
-
-        .send-btn {
-          background: linear-gradient(45deg, #ff8a00, #e52e71);
-          color: #fff;
-          border: none;
-          padding: 10px;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-
-        .send-btn:hover {
-          background: linear-gradient(45deg, #e52e71, #ff8a00);
-        }
-      `}</style>
-    </>
+    <div className="tradingview-widget-container">
+      <div id="tradingview_0b60e"/>
+    </div>
   );
 };
 
-export default Gurudev;
+export default TradingViewWidget;
