@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from 'next/router';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Head from 'next/head';
 import { useAtom } from 'jotai';
 import { NextPage } from 'next';
@@ -58,24 +58,24 @@ const guestPassword = guestAccess().password
                     priority
                     src="/loginImg1.png"
                     alt="instagram"
-                    layout="fill"
-                    objectFit="contain"
+                    width={250}
+                    height={541}
                   />
                 </div>
                 <div className="absolute top-0 right-0 h-[541px] w-[250px] animate-loginImage2 opacity-0">
                   <Image
                     src="/loginImg2.png"
                     alt="instagram"
-                    layout="fill"
-                    objectFit="contain"
+                    width={250}
+                    height={541}
                   />
                 </div>
                 <div className="absolute top-0 right-0 h-[541px] w-[250px] animate-loginImage3 opacity-0">
                   <Image
                     src="/loginImg3.png"
                     alt="instagram"
-                    layout="fill"
-                    objectFit="contain"
+                    width={250}
+                    height={541}
                   />
                 </div>
 
@@ -83,8 +83,8 @@ const guestPassword = guestAccess().password
                   <Image
                     src="/loginlmg5.png"
                     alt="instagram"
-                    layout="fill"
-                    objectFit="contain"
+                    width={250}
+                    height={541}
                   />
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default Login;
 
 // import React from 'react';
 // import Router from 'next/router';
-// import Image from 'next/image';
+// import Image from 'next/future/image';
 // import Head from 'next/head';
 // import { useAtom } from 'jotai';
 // import { NextPage } from 'next';

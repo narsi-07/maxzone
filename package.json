@@ -6,16 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postbuild": "react-snap"
-  },
+    "lint": "next lint"
+    },
   "dependencies": {
     "@types/firebase": "^3.2.1",
     "browser-image-compression": "^2.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "firebase": "^9.23.0",
     "jotai": "^1.7.8",
-    "next": "12.2.3",
+    "next": "^12.3.4",
     "openai": "^4.24.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
