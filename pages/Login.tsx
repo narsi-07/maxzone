@@ -81,10 +81,11 @@ const guestPassword = guestAccess().password
 
                 <div className="absolute top-0 right-0 h-[541px] w-[250px] animate-loginImage4 opacity-0">
                   <Image
-                    src="/loginlmg5.png"
-                    alt="instagram"
-                    width={250}
-                    height={541}
+                     priority
+                     src="/loginImg1.png"
+                     alt="instagram"
+                     width={250}
+                     height={541}
                   />
                 </div>
               </div>
