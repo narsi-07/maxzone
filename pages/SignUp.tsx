@@ -51,7 +51,7 @@ const SignUp: NextPage = () => {
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       
-      <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
+      <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#FFFFFF]">
         <div>
           
           <div className="flex max-w-[350px] flex-col items-center justify-center  bg-white">
