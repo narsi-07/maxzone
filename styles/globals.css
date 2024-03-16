@@ -19,6 +19,35 @@ body {
 
 }
 
+.mobi {
+    height: 400px;
+    width: 300px;
+}
+
+.mobiguest{
+  height: 33px;
+}
+
+.mobilogin{
+  height: 33px;
+}
+.mobipass{
+  height: 43px;
+}
+
+#mobilogo {
+  margin-left: 80px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 576px) {
+  #mobilogo {
+    margin-left: 108px; /* Adjust margin for smaller screens */
+    margin-bottom: 50px; /* Adjust margin for smaller screens */
+    
+  }
+}
+
 
 
 
@@ -119,7 +148,7 @@ margin-left: 111px;
 }
 
 .messagebordedesign{
-  height: 540px;
+  height: 650px;
 }
 
 .usertotalkdesign{

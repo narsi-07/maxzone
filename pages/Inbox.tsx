@@ -34,7 +34,7 @@ const Inbox: NextPage = () => {
     <div className="h-screen cursor-default overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
         <title>ShareTrendy • Chats</title>
-        <meta name="description" content="Instagram Clone" />
+        <meta name="description" content="ShareTrendy" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       <Header page="Inbox" />
@@ -44,7 +44,7 @@ const Inbox: NextPage = () => {
         <div />
       )}
       <div className="messagebordedesign relative mx-auto mt-0 h-[calc(100%-140px)] max-w-[100%] border border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] sm:h-[calc(100%-90px)]">
-        <div className="flex h-[50px] w-[100px] items-center border-b border-stone-200 dark:border-stone-700 md:w-[350px] md:px-5">
+        <div className="flex h-[51px] w-[100px] items-center border-b border-stone-260 dark:border-stone-700 md:w-[350px] md:px-5">
           {/* <button
           aria-label='button'
             onClick={() => setCreateChatRoom(!createChatRoom)}

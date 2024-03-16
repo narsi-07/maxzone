@@ -8,10 +8,10 @@ function IndexSVG({ page }: { page: string }) {
     <svg
       aria-label="Messenger"
       className="ml-[10px] cursor-pointer sm:ml-[22px]"
-      height="24"
+      height="26"
       role="img"
       viewBox="0 0 24 24"
-      width="24"
+      width="26"
       color={darkMode ? '#1c1c1c' : 'white'}
     >
       <path

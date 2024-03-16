@@ -38,7 +38,7 @@ const guestPassword = guestAccess().password
         <meta name="description" content="Instagram Clone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
+      <div className="flex min-h-[100vh] w-full items-center justify-center rgb(255 255 255 / var(--tw-bg-opacity));">
         <div>
           <div className="relative hidden h-[590px] overflow-hidden lg:block">
             <Image
@@ -93,9 +93,9 @@ const guestPassword = guestAccess().password
           </div>
         </div>
         <div>
-          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
+          <div className="flex mobi max-w-[350px] flex-col items-center justify-center bg-white">
             <div className="w-full px-5 sm:px-10">
-             <div className='dazzlonelogin'> <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" /></div>
+             <div id='mobilogo' className='dazzlonelogin'> <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" /></div>
               <form
                 action=""
                 className="signInPageFormContainer"
@@ -116,7 +116,7 @@ const guestPassword = guestAccess().password
                 <label htmlFor="signInPageEmail">
                   {' '}
                   <input
-                    className=" w-full border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className=" w-full mobipass border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
                     type="email"
                     id="signInPageEmail"
                     value={email}
@@ -130,7 +130,7 @@ const guestPassword = guestAccess().password
                 <label htmlFor="signInPagePassword">
                   {' '}
                   <input
-                    className="w-full border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className="w-full border mobipass rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
                     type="password"
                     id="signInPagePassword"
                     value={password}
@@ -146,7 +146,7 @@ const guestPassword = guestAccess().password
                     emailFormErrors === '' && passwordFormErrors === ''
                       ? 'bg-[#02ab05]'
                       : 'pointer-events-none cursor-default bg-[#94d49b]'
-                  } my-5 w-full rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
+                  } my-5 mobilogin w-full rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
                   type="submit"
                 >
                   Log In
@@ -159,7 +159,7 @@ const guestPassword = guestAccess().password
                   <div className="w-full border-b border-stone-300" />
                 </div>
                 <button
-                  className="mb-10 w-full rounded-[4px] bg-[#02ab05] px-2 py-1 text-sm font-semibold text-white"
+                  className="mb-10 mobiguest w-full rounded-[4px] bg-[#02ab05] px-2 py-1 text-sm font-semibold text-white"
                   type="button"
                   onClick={(e: any) =>
                     handleSignIn({
@@ -180,7 +180,7 @@ const guestPassword = guestAccess().password
               </form>
             </div>
           </div>
-          <div className="mt-2 flex max-w-[350px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="mt-2 flex max-w-[350px] justify-center  bg-white py-5 text-[14px]">
             <p>Do not have an account?</p>
             <button
               className="ml-1 font-semibold text-[#02ab05]"

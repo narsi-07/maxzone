@@ -54,7 +54,7 @@ const SignUp: NextPage = () => {
       <div className="flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
         <div>
           
-          <div className="flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
+          <div className="flex max-w-[350px] flex-col items-center justify-center  bg-white">
             <div className="px-10 pb-5 text-center font-semibold text-[#8e8e8e]">
             <div className='dazzlonesignup'> <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" /></div>
               <p>Sign up to Explore Visual Insights from Your Fellow Investors!</p>
@@ -83,7 +83,7 @@ const SignUp: NextPage = () => {
                 <label htmlFor="signInPageUserName">
                   {' '}
                   <input
-                    className="w-full border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className="w-full mobipass border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
                     type="text"
                     id="signInPageUserName"
                     value={username}
@@ -97,7 +97,7 @@ const SignUp: NextPage = () => {
                 <label htmlFor="signInPageEmail">
                   {' '}
                   <input
-                    className=" w-full border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className=" w-full border mobipass rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
                     type="email"
                     id="signInPageEmail"
                     value={email}
@@ -111,7 +111,7 @@ const SignUp: NextPage = () => {
                 <label htmlFor="signInPagePassword">
                   {' '}
                   <input
-                    className="w-full border rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
+                    className="w-full border mobipass rounded-[6px] border-stone-300 bg-[#fafafa] px-2 py-[7px] text-sm focus:outline-none"
                     type="password"
                     id="signInPagePassword"
                     value={password}
@@ -128,7 +128,7 @@ const SignUp: NextPage = () => {
                     emailFormErrors === ''
                       ? 'bg-[#02ab05]'
                       : 'pointer-events-none cursor-default bg-[#8fdb90]'
-                  } my-5 w-full rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
+                  } my-5 w-full mobiguest rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
                   type="submit"
                 >
                   Sign Up {'  '}{loading && 'Loading...'}
@@ -136,7 +136,7 @@ const SignUp: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="mt-2 flex max-w-[350px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="mt-2 flex max-w-[350px] justify-center  bg-white py-5 text-[14px]">
             <p>Have an account?</p>
             <button
               className="ml-1 font-semibold text-[#02ab05]"

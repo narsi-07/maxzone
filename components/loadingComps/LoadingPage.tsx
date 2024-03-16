@@ -12,7 +12,7 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
     >
       <Head>
         <title>ShareTrendy</title>
-        <meta name="description" content="Instagram Clone" />
+        <meta name="description" content="ShareTrendy" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       {checkingUserRoute ? <Header page="Profile" /> : ''}

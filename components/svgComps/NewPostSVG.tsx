@@ -8,10 +8,10 @@ function TikTokAddPostSVG() {
     <svg
       aria-label="New post"
       className="ml-[10px] cursor-pointer sm:ml-[22px]"
-      height="24"
+      height="27"
       role="img"
       viewBox="0 0 24 24"
-      width="24"
+      width="27"
     >
       <circle
         cx="12"

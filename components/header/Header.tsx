@@ -45,7 +45,7 @@ function Header({ page }: { page: string }) {
 
   return (
     <div className="sticky top-0 z-50 border-b border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] dark:text-slate-100">
-      <div className=" flex h-[60px] items-center justify-between px-[5px] sm:px-[20px] lg:justify-center ">
+      <div className=" flex h-[60px] items-center justify-between px-[10px] sm:px-[20px] lg:justify-center ">
         <div className="flex h-[60px] w-[330px] items-center ">
 
 
@@ -65,7 +65,7 @@ function Header({ page }: { page: string }) {
         </div>
         <div className="relative  sm:flex">
           <input
-            className=" searchdesign w-[130px] rounded-lg bg-[#dedfe0] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#dedfe0]  lg:w-[275px]"
+            className=" searchdesign w-[160px] rounded-lg bg-[#dedfe0] py-[6px] pl-[45px] focus:outline-0 dark:bg-[#dedfe0]  lg:w-[275px]"
             type="text"
             placeholder="Search"
             value={nameSearch}
@@ -99,7 +99,7 @@ function Header({ page }: { page: string }) {
               <div className="relative">
                 <IndexSVG page={page} />
                 {newMessage ? (
-                  <div className="absolute top-[-6px] right-[-8px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-[#2da69c]">
+                  <div className="absolute top-[-6px] right-[-8px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-[#d10f3c]">
                     <p className="text-center text-white">◉</p>
                   </div>
                 ) : (

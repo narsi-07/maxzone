@@ -10,10 +10,10 @@ function HeartHollow() {
       // color={darkMode ? '#f1f5f9' : '#262626'}
       className={darkMode ? 'fill-[#f1f5f9]' : 'fill-[#262626]'}
       // fill={darkMode ? '#f1f5f9' : '#262626'}
-      height="24"
+      height="26"
       role="img"
       viewBox="0 0 24 24"
-      width="24"
+      width="26"
     >
       <path
         id="like"
