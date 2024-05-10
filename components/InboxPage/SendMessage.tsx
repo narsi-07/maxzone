@@ -11,7 +11,7 @@ function SendMessage({
 }) {
   // const [darkMode] = useAtom(atoms.darkMode);
   return (
-    <div className={`absolute bottom-0 top-0 ${move ? 'left-[0px]':'left-[130px]'} flex ${move ? 'w-[calc(100%-3px)]':'w-[calc(100%-130px)]'} flex-col items-center justify-center  border-stone-200 bg-white p-6 dark:border-stone--700 dark:bg-[#1c1c1c] md:left-[350px] md:w-[calc(100%-350px)]`}>
+    <div className={`absolute bottom-0 top-0 ${move ? 'left-[0px]':'left-[130px]'} flex ${move ? 'w-[calc(100%-3px)]':'w-[calc(100%-130px)]'} flex-col items-center justify-center border-l border-stone-300  border-stone-200 bg-white p-6 dark:border-stone--700 dark:bg-[#1c1c1c] md:left-[350px] md:w-[calc(100%-350px)]`}>
    <svg
     height="100px"
     width="100px"
@@ -23,8 +23,8 @@ function SendMessage({
     xmlSpace="preserve"
     fill="#000000"
   >
-    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
     <g id="SVGRepo_iconCarrier">
       <path
         style={{ fill: '#111313' }}

@@ -8,6 +8,11 @@ import AddStory from './AddStory';
 import StoryBoardTag from './StoryBoardTag';
 import atoms from '../../util/atoms';
 
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 function StoryBoard() {
   const [darkMode] = useAtom(atoms.darkMode);
   const [storiesArray] = useAtom(atoms.storiesArray);
@@ -21,10 +26,12 @@ function StoryBoard() {
 
   return (
     <div
-      className={`${
-        darkMode ? 'scrollbarDark' : 'scrollbarLight'
-      }  scrollbar mt-6 flex overflow-x-auto rounded-lg border border-stone-300 bg-white py-4 pl-4 dark:border-stone-700 dark:bg-[#1c1c1c]`}
-    >
+    onMouseDown={playMouseClickSound}
+    role="presentation" // Add role="presentation" to indicate a presentational element
+    className={`${
+      darkMode ? 'scrollbarDark' : 'scrollbarLight'
+    }  scrollbar mt-1 flex overflow-x-auto rounded-lg border border-stone-300 bg-white py-4 pl-4 dark:border-stone-700 dark:bg-[#1c1c1c]`}
+  >
       <AddStory />
       <div
         className={`${storiesLoading ? 'fixed opacity-0' : ''} flex`}

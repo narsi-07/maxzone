@@ -16,8 +16,8 @@ function DragPhotosVideos() {
     xmlSpace="preserve"
     fill="#000000"
   >
-    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
     <g id="SVGRepo_iconCarrier">
       <path
         style={{ fill: '#4ACFD9' }}

@@ -57,7 +57,7 @@ console.log('uswe',userdetails)
 </Head>
 
       <Header page="Home" />
-      <div className="mx-auto flex max-w-[822px] justify-center pb-16 lg:justify-start">
+      <div className=" iuihihihi mx-auto flex max-w-[822px] justify-center pb-16 lg:justify-start">
         <div className="w-full max-w-[470px] flex-grow lg:mr-8 ">
           <StoryBoard />
           <div

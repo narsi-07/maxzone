@@ -22,7 +22,7 @@ function EmojiSelector({ inputText, setInputText }: Props) {
   return (
     <div
       id="emojiSelector"
-      className="h-[320px] w-[330px] overflow-y-auto rounded-md bg-white p-3 pt-0 text-[#8E8E8E] shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_0px_rgba(0,0,0,0.7)]"
+      className="h-[320px] w-[300px] overflow-y-auto rounded-md bg-white p-3 pt-0 text-[#8E8E8E] shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_0px_rgba(0,0,0,0.7)]"
     >
       <h1 className="mt-2 mb-1 font-semibold">Most popular</h1>
       <div className="flex flex-wrap justify-between  ">

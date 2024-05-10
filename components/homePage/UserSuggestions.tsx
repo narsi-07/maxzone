@@ -7,12 +7,15 @@ import LoadingSuggestions from '../loadingComps/LoadingSuggestions';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 import VerificationBadge from '../VerificationBadge'; // Import the VerificationBadge component
 
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 function UserSuggestions() {
   const [userDetails] = useAtom(atoms.userDetails);
   const [spotlightUsers] = useAtom(atoms.spotlightUsers);
-  const [suggestionsLoading, setSuggestionsLoading] = useAtom(
-    atoms.suggestionsLoading
-  );
+  const [suggestionsLoading, setSuggestionsLoading] = useAtom(atoms.suggestionsLoading);
 
   useEffect(() => {
     // This code will be executed when the component has mounted
@@ -50,9 +53,9 @@ function UserSuggestions() {
         </div>
         <Link href={`/${userDetails?.displayName}`}>
           <a>
-            <p className="cursor-pointer text-xs font-semibold text-[#07a69e]">
+            <button type="button" onMouseDown={playMouseClickSound} className="cursor-pointer text-xs font-semibold text-[#07a69e]">
               Your profile
-            </p>
+            </button>
           </a>
         </Link>
       </div>
@@ -61,20 +64,15 @@ function UserSuggestions() {
           <p className="text-sm font-semibold text-[#818181]">User Spotlight</p>
           <Link href="/Explore">
             <a>
-              <p className="cursor-pointer text-xs font-semibold">
+              <button type="button" onMouseDown={playMouseClickSound} className="cursor-pointer text-xs font-semibold">
                 See all users
-              </p>
+              </button>
             </a>
           </Link>
         </div>
-        <div
-          className={`${suggestionsLoading ? 'fixed opacity-0' : ''}`}
-        >
+        <div className={`${suggestionsLoading ? 'fixed opacity-0' : ''}`}>
           {spotlightUsers.map((spotlightUserDetails) => (
-            <div
-              key={`${spotlightUserDetails?.userId}Spotlight`}
-              className="flex items-center justify-between py-2"
-            >
+            <div key={`${spotlightUserDetails?.userId}Spotlight`} className="flex items-center justify-between py-2">
               <div className="flex items-center gap-2">
                 {spotlightUserDetails?.avatarURL?.length !== 0 ? (
                   <Link href={`/${spotlightUserDetails?.username}`}>
@@ -104,35 +102,30 @@ function UserSuggestions() {
                     </a>
                   </Link>
                 )}
-                {/* Add the VerificationBadge component here */}
-           
                 <div>
                   <Link href={`/${spotlightUserDetails?.username}`}>
-                    <span className='usbt'>
                     <a>
-                      <p className="usbhw cursor-pointer text-xs font-semibold">
-                        {spotlightUserDetails?.username}
-                      
-                       
-                      </p>
+                      <span className='usbt'>
+                        <p className="usbhw cursor-pointer text-xs font-semibold">
+                          {spotlightUserDetails?.username}
+                        </p>
+                        <div className='usb'>
+                          {spotlightUserDetails?.isVerified && <VerificationBadge />}
+                        </div>
+                      </span>
                     </a>
-                    <div className='usb'> {spotlightUserDetails?.isVerified && <VerificationBadge />}</div>
-                    </span>
-                 
                   </Link>
                   <p className="text-xs text-[#818181]">
                     Followed by {spotlightUserDetails?.followers!.length}{' '}
-                    {spotlightUserDetails?.followers!.length === 1
-                      ? 'user'
-                      : 'users'}
+                    {spotlightUserDetails?.followers!.length === 1 ? 'user' : 'users'}
                   </p>
                 </div>
               </div>
               <Link href={`/${spotlightUserDetails?.username}`}>
                 <a>
-                  <p className="cursor-pointer text-xs font-semibold text-[#0095f6]">
+                  <button type="button" onMouseDown={playMouseClickSound} className="cursor-pointer text-xs font-semibold text-[#0095f6]">
                     Profile
-                  </p>
+                  </button>
                 </a>
               </Link>
             </div>

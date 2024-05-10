@@ -3,6 +3,11 @@ import handleGetFollowersOrFollowings from '../../util/handleGetFollowersOrFollo
 import FollowingFollowerDropDown from './FollowingFollowerDropDown';
 import { followingFollowerInfo, notificationTypes } from '../../util/atoms';
 
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 interface Props {
   showFollowers: boolean;
   showFollowing: boolean;
@@ -26,7 +31,17 @@ export default function FollowerFollowingDisplay({
   >([]);
 
   return (
-    <div className="flex gap-2 text-xs sm:justify-start sm:gap-7 sm:text-base">
+    <div
+  role="button"
+  tabIndex={0}
+  onClick={playMouseClickSound}
+  onKeyDown={(event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      playMouseClickSound();
+    }
+  }}
+  className="flex gap-2 text-xs sm:justify-start sm:gap-7 sm:text-base"
+>
       <p
         className="mx-auto flex flex-col items-center text-sm text-[#818181] sm:mx-auto sm:flex-row 
         sm:items-start sm:text-base sm:text-[#231f20] sm:dark:text-slate-100"

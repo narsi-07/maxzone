@@ -8,12 +8,12 @@ function HeartHollow() {
       id="like"
       aria-label="Like"
       // color={darkMode ? '#f1f5f9' : '#262626'}
-      className={darkMode ? 'fill-[#f1f5f9]' : 'fill-[#262626]'}
+      className={darkMode ? 'fill-[#ffff]' : 'fill-[#000]'}
       // fill={darkMode ? '#f1f5f9' : '#262626'}
-      height="26"
+      height="24"
       role="img"
       viewBox="0 0 24 24"
-      width="26"
+      width="24"
     >
       <path
         id="like"

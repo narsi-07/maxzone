@@ -12,6 +12,11 @@ import ProfilePicSVG from '../components/svgComps/ProfilePicSVG';
 import ArrowSVG from '../components/svgComps/ArrowSVG';
 import VerificationBadge from '../components/VerificationBadge'; 
 
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 const Explore: NextPage = () => {
   const [userStatus] = useAtom(atoms.userStatus);
   const [userDetails] = useAtom(atoms.userDetails);
@@ -29,10 +34,7 @@ const Explore: NextPage = () => {
   }
 
   return (
-    <div
-      className="h-screen overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313]
-    dark:text-slate-100 dark:[color-scheme:dark]"
-    >
+    <div className="h-screen overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
         <title>ShareTrendy • Explore</title>
         <meta name="description" content="Instagram Clone" />
@@ -107,19 +109,21 @@ const Explore: NextPage = () => {
         <div className="flex flex-col justify-center pt-5 font-semibold">
           <p className="mx-auto">Explore more users</p>
           <button
-            aria-label='button'
-            className="group mx-auto px-8 pb-8 pt-4"
-            type="button"
-            onClick={() => setRequestMoreUsers(!requestMoreUsers)}
-          >
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0095f6]   group-hover:animate-bounce">
-              <div className="h-5 w-5 pt-[1px]">
-                <div className="h-5 w-5 rotate-90 ">
-                  <ArrowSVG white />
-                </div>
-              </div>
-            </div>
-          </button>
+  onMouseDown={playMouseClickSound}
+  aria-label="Explore more users" // Add aria-label with a descriptive text
+  className="group mx-auto px-8 pb-8 pt-4"
+  type="button"
+  onClick={() => setRequestMoreUsers(!requestMoreUsers)}
+>
+  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0095f6] group-hover:animate-bounce">
+    <div className="h-5 w-5 pt-[1px]">
+      <div className="h-5 w-5 rotate-90">
+        <ArrowSVG white />
+      </div>
+    </div>
+  </div>
+</button>
+
         </div>
       </div>
     </div>

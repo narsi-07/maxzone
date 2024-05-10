@@ -4,7 +4,7 @@ function AddStorySVG() {
       <svg
         aria-label="New post"
         color="white"
-        fill="#13f0ec"
+        fill="#0490cc"
         height="20"
         role="img"
         viewBox="0 0 24 24"

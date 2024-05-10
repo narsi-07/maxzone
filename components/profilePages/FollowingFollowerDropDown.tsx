@@ -43,7 +43,7 @@ export default function FollowingFollowerDropDown({
       {showDropDown ? (
         <div
           className={`${
-            dropDownName === 'followers' ? 'left-[-75px]' : 'left-[-78px]'
+            dropDownName === 'followers' ? 'left-[-7px]' : 'left-[-160px]'
           } absolute top-12 z-50 w-[270px] cursor-default rounded-md  bg-white  shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_2px_rgba(0,0,0,0.7)] sm:left-[-85px]`}
         >
           {usersInfo.length === 0 ? (

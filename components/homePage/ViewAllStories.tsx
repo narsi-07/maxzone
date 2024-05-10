@@ -167,7 +167,7 @@ function ViewAllStories({
                             userDetails.displayName!
                           )
                             ? 'bg-[#999999]'
-                            : 'bg-gradient-to-tr from-[#ffee00] to-[#d300c8]'
+                            : 'bg-gradient-to-tr from-[#10f4e4] to-[#000]'
                         } absolute top-1/2 left-1/2 z-[999] h-[17vw] w-[17vw] -translate-x-1/2 -translate-y-1/2 transform rounded-full sm:h-[4.3vw] sm:w-[4.3vw]`}
                       />
                     </button>

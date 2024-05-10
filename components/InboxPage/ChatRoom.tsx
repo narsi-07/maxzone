@@ -12,6 +12,12 @@ import atoms from '../../util/atoms';
 import useHandleEmojiPopUp from '../../hooks/useHandleEmojiPopUp';
 import sendChatRoomMessage from '../../util/handleSendChatRoomMessage';
 
+
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 interface Props {
   chatRoomID: string;
   userID: string;
@@ -38,11 +44,16 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
   useHandleEmojiPopUp({ setDisplayEmojiSelector });
 
   return (
-    <div className="dark:text-slate-">
+    <div
+    role="button"
+    tabIndex={0} // This allows the element to receive keyboard focus
+    onMouseDown={playMouseClickSound}
+    className="dark:text-slate-"
+  >
       <div
-        className={`${
+        className={`hfjdkkh ${
           activeChat === activeChatId ? 'flex' : 'hidden'
-        } absolute ${ move ? 'left-[0px]': 'left-[50px]'} top-0 h-[50px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
+        } absolute ${ move ? 'left-[0px]': 'left-[110px]'} top-0 h-[40px] cursor-default items-center gap-2 border-1 border-stone-300 pl-2 dark:border-stone-700 md:left-[350px] md:gap-4 md:pl-10`}
       >
         {avatarURL === '' || !avatarURL ? (
           <div className="h-7 w-7">
@@ -78,13 +89,13 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
       <div
         className={`${
           activeChat === activeChatId
-            ? 'bg-[#efefef] dark:bg-[#070707]'
+            ? 'bg-[#bcecf3] dark:bg-[#070707]'
             : 'hover:bg-[#f8f8f8] dark:hover:bg-[#131313]'
         } md: flex w-full items-center px-1 py-2 md:px-5`}
       >
         <div className="mr-2 flex  items-center justify-center md:h-14 md:w-14">
           {avatarURL === '' || !avatarURL ? (
-            <div className="h-6 w-6 rounded-full md:h-14 md:w-14">
+            <div className=" h-6 w-6 rounded-full md:h-14 md:w-14">
               <ProfilePicSVG strokeWidth="1" />
             </div>
           ) : (
@@ -98,7 +109,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
             />
           )}
         </div>
-        <h1 className="text-xs md:text-base">{chatName}</h1>
+        <h1 className="top-[45px]  text-xs md:text-base">{chatName}</h1>
         {newMessage ? (
           <div className="ml-auto h-2 w-2 rounded-full bg-[#0095f6]" />
         ) : (
@@ -106,8 +117,8 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
         )}
       </div>
       {activeChat === activeChatId ? (
-        <div className={`absolute bottom-0 ${ move ? 'top-[5px]': 'top-[50px]'} ${ move ? 'left-[0px]':  'left-[100px]'} flex ${move ? 'w-[calc(100%-3px)]':'w-[calc(100%-130px)]'} cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]`}>
-          <div className="flex cursor-default flex-col-reverse gap-5 overflow-y-auto px-1 py-2 dark:[color-scheme:dark] md:px-5">
+        <div className={`absolute chatliveroombox bottom-0 ${ move ? 'top-[40px]': 'top-[41px]'} ${ move ? 'left-[0px]':  'left-[110px]'} flex ${move ? 'w-[calc(100%-3px)]':'w-[calc(100%-130px)]'} cursor-default flex-col justify-end border-l border-t  border-stone-300 dark:border-stone-700 md:left-[350px] md:w-[calc(100%-350px)]`}>
+          <div className="flex  cursor-default flex-col-reverse gap-5 overflow-y-auto px-1 py-2 dark:[color-scheme:dark] md:px-5">
             {messages.map((message, index) => (
               <div
                 key={`key${index}`}
@@ -123,16 +134,16 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
                 <p
                   className={`${
                     message.name === userID
-                      ? 'bg-[#efefef] dark:bg-[#070707]'
+                      ? 'hdjsfjh dark:bg-[#070707]'
                       : 'border border-stone-200 dark:border-stone-700'
-                  } max-w-[80%] rounded-[30px] p-2 text-xs  md:max-w-[50%] md:p-4 md:text-sm`}
+                  } jhkhjkhdjsfjh max-w-[80%] rounded-[30px] p-2 text-xs  md:max-w-[50%] md:p-4 md:text-sm`}
                 >
                   {message.text}
                 </p>
               </div>
             ))}
           </div>
-          <div className="relative mx-1 mt-3 mb-1 flex justify-between rounded-full border border-stone-200 dark:border-stone-700 dark:bg-[#131313] md:mx-5">
+          <div className="kjfjgijuoo relative mx-1 mt-3 mb-1 flex justify-between rounded-full border border-stone-200 dark:border-stone-700 dark:bg-[#131313] md:mx-5">
             <button
               className="px-2 md:px-5"
               type="button"
@@ -157,23 +168,27 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
               </div>
             </button>
             <TextareaAutosize
-              className="my-3 w-[80%] resize-none text-sm focus:outline-none dark:bg-[#131313]"
-              value={inputText}
-              onChange={(e) => setInputText(e.target.value)}
-              placeholder="Message..."
-              maxRows={4}
-              minRows={1}
-              onKeyPress={(e: any) =>
-                sendChatRoomMessage({
-                  e,
-                  chatRoomID,
-                  inputText,
-                  userID,
-                  setInputText,
-                  username: chatName,
-                })
-              }
-            />
+  className="my-3 w-[80%] resize-none text-sm focus:outline-none dark:bg-[#131313]"
+  value={inputText}
+  onChange={(e) => setInputText(e.target.value)}
+  placeholder="Message..."
+  maxRows={4}
+  minRows={1}
+  onKeyPress={(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // Prevent newline insertion
+      sendChatRoomMessage({
+        e,
+        chatRoomID,
+        inputText,
+        userID,
+        setInputText,
+        username: chatName,
+      });
+    }
+  }}
+/>
+
             <button
               id="sendMessage"
               className={`${

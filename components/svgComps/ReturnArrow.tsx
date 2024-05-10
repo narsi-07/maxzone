@@ -7,7 +7,7 @@ function ReturnArrow() {
     <div>
       <svg
         aria-label="Back"
-        color={darkMode ? '#f1f5f9' : '#262626'}
+        color={darkMode ? '#f1f5f9' : '#f1f5f9'}
         fill="#262626"
         height="24"
         role="img"

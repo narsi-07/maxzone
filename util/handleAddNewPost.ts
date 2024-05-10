@@ -1,11 +1,6 @@
 import React from 'react';
 import imageCompression from 'browser-image-compression';
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  getStorage,
-} from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL, getStorage } from 'firebase/storage';
 import {
   getFirestore,
   updateDoc,
@@ -23,47 +18,30 @@ import { User } from 'firebase/auth';
 import app from './firebaseConfig';
 import { notificationTypes, userDetailTypes } from './atoms';
 
-interface selectedMediaProps {
+interface selectedImageProps {
   e: any;
-  setSelectedMedia: React.Dispatch<React.SetStateAction<File | undefined>>;
-  setMediaSelected: React.Dispatch<React.SetStateAction<boolean>>;
+  setSelectedImage: React.Dispatch<React.SetStateAction<File | undefined>>;
+  setImageSelected: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function handleSelectedMedia({
+export function handleSelectedImage({
   e,
-  setSelectedMedia,
-  setMediaSelected,
-}: selectedMediaProps) {
+  setSelectedImage,
+  setImageSelected,
+}: selectedImageProps) {
   const fileType = e.target.files[0].type;
-  const mediaFile = e.target.files[0];
+  const imageFile = e.target.files[0];
 
   if (
     fileType === 'image/png' ||
     fileType === 'image/jpg' ||
-    fileType === 'image/jpeg' ||
-    fileType === 'video/mp4'
+    fileType === 'image/jpeg'
   ) {
-    setSelectedMedia(mediaFile);
-    setMediaSelected(true);
+    setSelectedImage(imageFile);
+    setImageSelected(true);
   } else {
-    console.log('Please only use .png, .jpg, .jpeg, or .mp4 file types');
+    console.log('please only use .png, .jpg, .jpeg file types');
   }
-}
-
-async function compressImage(inputFile: File): Promise<Blob> {
-  const options = {
-    maxSizeMB: 1,
-    maxWidthOrHeight: 600,
-    useWebWorker: true,
-  };
-
-  return await imageCompression(inputFile, options);
-}
-
-async function compressVideo(inputFile: File): Promise<Blob> {
-  // For video compression, you can use ffmpeg or similar libraries.
-  // For simplicity, we'll just return the input video file for now.
-  return Promise.resolve(inputFile);
 }
 
 interface handleSubmitProps {
@@ -89,7 +67,9 @@ async function handleSubmitToDB({
     'userPosts'
   );
 
+  // add to post count
   updateDoc(userRef, {
+    // eslint-disable-next-line no-unsafe-optional-chaining
     postCount: userNotifications?.postCount! + 1,
   });
 
@@ -100,31 +80,34 @@ async function handleSubmitToDB({
     createdAt: new Date().toLocaleDateString(),
   };
 
+  // create document within 'username'Posts
   await addDoc(collection(db, `${userNotifications?.username}Posts`), {
     createdAt: serverTimestamp(),
-    mediaURL: url,
+    imgURL: url,
     likeCount: 0,
     comments: [postCaption],
     postID: '',
     likes: [],
   });
 
+  // get latest added doc ID
   const q = query(
     collection(db, `${userNotifications?.username}Posts`),
     orderBy('createdAt', 'desc'),
     limit(1)
   );
-
   let latestPostId: string;
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((latestPost: any) => {
     latestPostId = latestPost.id;
   });
 
+  // update users post list with the latest document ID
   updateDoc(userPostDocRef, {
     postsListArray: arrayUnion(latestPostId!),
   });
 
+  // add document ID to within the post document
   const docRef = doc(db, `${userNotifications?.username!}Posts`, latestPostId!);
   updateDoc(docRef, {
     postID: latestPostId!,
@@ -135,7 +118,7 @@ interface submitProps {
   userNotifications: notificationTypes;
   userDetails: userDetailTypes | User;
   caption: string;
-  selectedMedia: File;
+  selectedImage: File;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setAddPost: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -144,29 +127,30 @@ export async function handleSubmit({
   userNotifications,
   userDetails,
   caption,
-  selectedMedia,
+  selectedImage,
   setLoading,
   setAddPost,
 }: submitProps) {
   const storage = getStorage();
+  const options = {
+    maxSizeMB: 1,
+    maxWidthOrHeight: 600,
+    useWebWorker: true,
+  };
+
   setLoading(true);
 
   const storageRef = ref(storage,
     `posts/${userDetails.displayName}post${userNotifications?.postCount! + 1}`
   );
 
-  let compressedFile: Blob;
-  
-  if (selectedMedia.type.startsWith('video/')) {
-    compressedFile = await compressVideo(selectedMedia);
-  } else {
-    compressedFile = await compressImage(selectedMedia);
-  }
+  // compress the image
+  const compressedFile = await imageCompression(selectedImage!, options);
 
+  // upload to storage, and then retrieve the usable URL
   await uploadBytes(storageRef, compressedFile).then(() => {
-    // File uploaded
+    // image uplaoded
   });
-
   getDownloadURL(
     ref(
       storage,

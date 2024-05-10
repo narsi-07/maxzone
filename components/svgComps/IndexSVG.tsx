@@ -2,11 +2,11 @@
 import { useAtom } from 'jotai';
 import atoms from '../../util/atoms';
 
-function IndexSVG({ page }: { page: string }) {
+function IndexSVG() {
   const [darkMode] = useAtom(atoms.darkMode);
   
   // Define the fill color based on darkMode
-  const fillColor = darkMode ? '#ffffff' : '#000000';
+  const fillColor = darkMode ? '#000000' : '#ffffff';
 
   return (
     <svg className='inboxsvg' fill={fillColor} height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  

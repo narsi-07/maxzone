@@ -10,7 +10,7 @@ function SelectionBtnSVG({ ticked }: { ticked: boolean }) {
       aria-label="Toggle selection"
       className="mr-2 cursor-pointer"
       color={darkMode ? '#f1f5f9' : '#262626'}
-      fill="#0095f6"
+      fill="#09ff19"
       height="24"
       role="img"
       viewBox="0 0 24 24"

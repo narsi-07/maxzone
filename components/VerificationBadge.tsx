@@ -4,8 +4,8 @@ const VerificationBadge = () => (
   <span style={{display: 'inline-block',  marginLeft: '5px', color: 'blue' }}>
     <svg
       version="1.1"
-      width="20"
-      height="20"
+      width="13"
+      height="13"
       viewBox="0 0 256 256"
       xmlSpace="preserve"
       dangerouslySetInnerHTML={{
