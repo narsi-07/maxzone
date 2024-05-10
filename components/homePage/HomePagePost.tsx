@@ -125,26 +125,49 @@ useEffect(() => {
               document.body.style.overflow = 'hidden';
             }}
           >
-            {index === 0 ? (
-              <Image
-                className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
-                src={postDetails.imgURL}
-                alt="post"
-                width="0"
-                height="0"
-                sizes="100vw"
-                // if first image add priority
-                priority
-              />
+           {index === 0 ? (
+              postDetails.imgURL ? (
+                <Image
+                  className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
+                  src={postDetails.imgURL}
+                  alt="post"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  priority
+                />
+              ) : postDetails.mediaURL ? (
+                <video
+                  className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
+                  width="320"
+                  height="240"
+                  controls
+                >
+                  <source src={postDetails.mediaURL} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : null
             ) : (
-              <Image
-                className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
-                src={postDetails.imgURL}
-                alt="post"
-                width="0"
-                height="0"
-                sizes="100vw"
-              />
+              postDetails.imgURL ? (
+                <Image
+                  className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
+                  src={postDetails.imgURL}
+                  alt="post"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                />
+              ) : postDetails.mediaURL ? (
+                <video
+                  className="h-auto min-h-[150px] w-full select-none bg-[#ebebeb] dark:bg-[#313131]"
+                  width="320"
+                  height="240"
+                  controls
+                >
+                  <source src={postDetails.mediaURL} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : null
             )}
           </div>
           <div>
@@ -214,7 +237,14 @@ useEffect(() => {
                   </div>
                 </button>
               </div>
+
               <div className="flex text-sm">
+  <p>
+    <b>{postDetails.likes.length}</b> Likes
+  </p>
+</div>
+
+              {/* <div className="flex text-sm">
                 <p>
                   Liked by{' '}
                   <b>
@@ -238,7 +268,7 @@ useEffect(() => {
                     </b>
                   </div>
                 )}
-              </div>
+              </div> */}
               <div className="max-h-[260px] overflow-hidden">
                 <HomePagePostHeaderComments postDetails={postDetails} />
               </div>

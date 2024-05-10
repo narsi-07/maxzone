@@ -5,7 +5,7 @@ import CloseBtnSVG from '../svgComps/CloseBtnSVG';
 import DragPhotosVideos from '../svgComps/DragPhotosVideos';
 import ReturnArrow from '../svgComps/ReturnArrow';
 import atoms from '../../util/atoms';
-import { handleSelectedImage, handleSubmit } from '../../util/handleAddNewPost';
+import { handleSelectedMedia, handleSubmit } from '../../util/handleAddNewPost';
 
 function AddNewPost({
   setAddPost,
@@ -15,15 +15,14 @@ function AddNewPost({
   const [userDetails] = useAtom(atoms.userDetails);
   const [userNotifications] = useAtom(atoms.userNotifications);
 
-  const [imageSelected, setImageSelected] = React.useState(false);
-  const [selectedImage, setSelectedImage] = React.useState<any>();
+  const [mediaSelected, setMediaSelected] = React.useState(false);
+  const [selectedMedia, setSelectedMedia] = React.useState<any>();
   const [caption, setCaption] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
   return (
-    
     <div
-      className="fixed top-0 z-10 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
+      className="fixed top-0 z-10 flex h-full w-full cursor-default items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
       onClick={(e: any) => {
         if (e.target.id === 'closeAddPost') setAddPost(false);
       }}
@@ -44,7 +43,7 @@ function AddNewPost({
       ) : (
         <div>
           <button
-          aria-label='button'
+            aria-label='button'
             className="fixed top-5 right-5"
             type="button"
             onClick={() => setAddPost(false)}
@@ -56,14 +55,14 @@ function AddNewPost({
             />
           </button>
           <div className="w-[389px] flex-col overflow-hidden rounded-xl bg-white dark:border dark:border-stone-300 dark:bg-[#000000]">
-            {imageSelected ? (
+            {mediaSelected ? (
               <div>
                 <div className="flex items-center justify-between px-4">
                   <button
-                  aria-label='button'
+                    aria-label='button'
                     onClick={() => {
-                      setSelectedImage(undefined);
-                      setImageSelected(false);
+                      setSelectedMedia(undefined);
+                      setMediaSelected(false);
                     }}
                     type="button"
                   >
@@ -78,7 +77,7 @@ function AddNewPost({
                         userNotifications,
                         userDetails,
                         caption,
-                        selectedImage,
+                        selectedMedia,
                         setLoading,
                         setAddPost,
                       })
@@ -91,11 +90,20 @@ function AddNewPost({
                 </div>
                 <div>
                   <picture>
-                    <img
-                      className="h-[444px] w-[444px] object-cover"
-                      src={URL.createObjectURL(selectedImage!)}
-                      alt="post"
-                    />
+                    {selectedMedia.type.startsWith('video/') ? (
+                      <video
+                        className="h-[444px] w-[444px] object-cover"
+                        controls
+                      >
+                        <source src={URL.createObjectURL(selectedMedia)} />
+                      </video>
+                    ) : (
+                      <img
+                        className="h-[444px] w-[444px] object-cover"
+                        src={URL.createObjectURL(selectedMedia)}
+                        alt="post"
+                      />
+                    )}
                   </picture>
                 </div>
                 <div className="p-4">
@@ -110,7 +118,6 @@ function AddNewPost({
               </div>
             ) : (
               <div>
-                
                 <h1 className="border-b border-stone-300 py-5 text-center font-semibold dark:border-stone-700">
                   Create new post
                 </h1>
@@ -121,20 +128,20 @@ function AddNewPost({
                   <h1 className="py-5 text-xl">Upload posts</h1>
                   <div className="flex justify-center rounded-[4px] bg-[#0095f6] text-sm font-semibold text-white dark:border-stone-700 dark:text-[#0f0f0f]">
                     <label
-                      className="flex-grow cursor-pointer px-3 py-1  text-center"
-                      htmlFor="photoFile"
+                      className="flex-grow cursor-pointer px-3 py-1 text-center"
+                      htmlFor="mediaFile"
                     >
-                      Select From Gallery
+                      Select Media
                       <input
                         type="file"
-                        id="photoFile"
-                        accept=".png, .jpg, .jpeg"
+                        id="mediaFile"
+                        accept=".png, .jpg, .jpeg, .mp4"
                         hidden
                         onChange={(e) =>
-                          handleSelectedImage({
+                          handleSelectedMedia({
                             e,
-                            setSelectedImage,
-                            setImageSelected,
+                            setSelectedMedia,
+                            setMediaSelected,
                           })
                         }
                       />
@@ -151,5 +158,3 @@ function AddNewPost({
 }
 
 export default AddNewPost;
-
-

@@ -4,44 +4,18 @@ import atoms from '../../util/atoms';
 
 function IndexSVG({ page }: { page: string }) {
   const [darkMode] = useAtom(atoms.darkMode);
+  
+  // Define the fill color based on darkMode
+  const fillColor = darkMode ? '#ffffff' : '#000000';
+
   return (
-    <svg
-      aria-label="Messenger"
-      className="ml-[10px] cursor-pointer sm:ml-[22px]"
-      height="26"
-      role="img"
-      viewBox="0 0 24 24"
-      width="26"
-      color={darkMode ? '#1c1c1c' : 'white'}
-    >
-      <path
-        d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z"
-        stroke={darkMode ? '#f1f5f9' : '#262626'}
-        strokeMiterlimit="10"
-        strokeWidth="1.739"
-        fill={
-          page === 'Inbox'
-            ? darkMode
-              ? '#f1f5f9'
-              : '#262626'
-            : darkMode
-            ? '#262626'
-            : 'white'
-        }
-      />
-      <path
-        d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z"
-        fillRule="evenodd"
-        fill={
-          page === 'Inbox'
-            ? darkMode
-              ? '#262626'
-              : 'white'
-            : darkMode
-            ? 'white'
-            : '#262626'
-        }
-      />
+    <svg className='inboxsvg' fill={fillColor} height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  
+	 viewBox="0 0 60 60">
+      <path d="M30.5,0C14.233,0,1,13.233,1,29.5c0,5.146,1.346,10.202,3.896,14.65L0.051,58.684c-0.116,0.349-0.032,0.732,0.219,1
+      C0.462,59.889,0.728,60,1,60c0.085,0,0.17-0.011,0.254-0.033l15.867-4.175C21.243,57.892,25.86,59,30.5,59
+      C46.767,59,60,45.767,60,29.5S46.767,0,30.5,0z M17,34c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S19.206,34,17,34z M30,34
+      c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S32.206,34,30,34z M43,34c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
+      S45.206,34,43,34z"/>
     </svg>
   );
 }

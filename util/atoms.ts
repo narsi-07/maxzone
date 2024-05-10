@@ -62,6 +62,7 @@ export interface postType {
   comments: postCommentTypes[];
   createdAt: any;
   imgURL: string;
+  mediaURL: string;
   likeCount: number;
   likes: string[];
   postID: string;

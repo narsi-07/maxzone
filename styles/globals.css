@@ -96,12 +96,12 @@ margin-bottom: 3px;
 
 
 .dazzlonelogin{
-  height: 40px;
+  height: 10px;
   width: 40px;
   
-margin-top: 10px;
-margin-bottom: 30px; 
-margin-left: 76px; 
+margin-top: 0px;
+margin-bottom: 0px; 
+ 
 
 }
 
@@ -470,3 +470,49 @@ main .msgs_cont .rchat {
 }
 /* Normal styles for screens larger than 600 pixels */
 
+
+
+
+/* Dekh bhai narsi this css is only for my additional login page design ke liye h jo tu kabhi bhi hata sakta h  */
+
+
+.bg-white-loginpage{
+  background-color: #ecf0f3;
+  border-radius: 13px;
+  width: 310px;
+  height: 400px;
+  padding: 15px;
+  padding-bottom: 35px;
+  display: flex;
+  
+}
+
+.bg-white-loginpage2{
+  background-color: #ecf0f3;
+  border-radius: 13px;
+  width: 310px;
+ 
+}
+
+.userenter, .password {
+
+  height: 50px;
+  width: 240px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+
+.passerror{
+  margin-bottom: 10px;
+}
+
+/* the end */
+
+
+
+
+.inboxsvg{
+  margin-left: 12px;
+}
