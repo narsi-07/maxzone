@@ -49,7 +49,7 @@ function AddProfilePhoto({
           >
 
             <div className='editprofileimage'>
-            <button className='jkgjgjg1'> Add new picture</button>
+            <button type='button' className='jkgjgjg1'> Add new picture</button>
            
             </div>
           
@@ -86,7 +86,7 @@ function AddProfilePhoto({
           }
         >
           <div className='profileremoveedit'>
-          <button className='jkgjgjg'>Remove Profile</button>
+          <button type='button' className='jkgjgjg'>Remove Profile</button>
           </div>
         
         </button>
@@ -96,7 +96,7 @@ function AddProfilePhoto({
           type="button"
         >
 <div className='profileremoveedit'>
-  <button className='hjfhd3'>Back</button>
+  <button type='button' className='hjfhd3'>Back</button>
 
           </div>
         </button>
