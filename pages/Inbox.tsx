@@ -52,7 +52,7 @@ const Inbox: NextPage = () => {
         ) : (
           null
         )}
-        <div className={`${move ? 'w-[0px]' : 'w-[110px]'} h-[calc(100%-60px)] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]`}>
+        <div className={`${move ? 'jhfjgfj w-[0px]' : 'w-[110px]'} h-[calc(100%-60px)] overflow-y-auto overflow-x-hidden dark:[color-scheme:dark] md:w-[350px]`}>
           <div className={chatRoomLoading ? 'fixed opacity-0' : ''}>
             {userNotifications?.chatRoomIds?.map((chatRoomId) => (
               <div

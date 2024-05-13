@@ -58,7 +58,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
   </div>
 </div>
 
-      <div className="mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
+      <div className="jhghjfj mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
         <div className="flex h-[50%] w-full items-center justify-center bg-black sm:h-full lg:w-[50%]">
           <Image
             className="h-full w-full select-none object-contain sm:h-[520px] lg:w-[520px]"
