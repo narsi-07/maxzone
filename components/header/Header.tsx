@@ -293,7 +293,7 @@ function Header({ page }: { page: string }) {
             <div
             style={{top: '-130px'}}  className={`${
                 avatarDropDown ? 'show' : 'hidden'
-              } forborderrad absolute  right-[-14px]  z-50 w-[230px] items-center justify-start bg-white text-sm shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_2px_rgba(0,0,0,0.7)]`}
+              } forborderrad absolute  right-[-1px]  z-50 w-[230px] items-center justify-start bg-white text-sm shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_2px_rgba(0,0,0,0.7)]`}
             >
               <Link href={`/${userDetails.displayName}`}>
                 <a>
@@ -307,7 +307,7 @@ function Header({ page }: { page: string }) {
               </Link>
               <Link href="/Explore">
                 <a>
-                  <div className="kjghh flex items-center py-2 px-4 hover:bg-[#f8f8f8] dark:hover:bg-[#080808]">
+                  <div className="jhgjhkkg flex items-center py-2 px-4 hover:bg-[#f8f8f8] dark:hover:bg-[#080808]">
                     <ExploreSVG />
                     <p className="pl-2">Explore</p>
                   </div>

@@ -62,7 +62,7 @@ function StoryBoardTag({ username}: { username: string }) {
             didView
               ? 'bg-[#e4e4e4] dark:bg-[#4d4d4d]'
               : 'bg-gradient-to-tr from-[#10f4e4] to-[#000]'
-          } absolute top-[-2px] left-[-2px] z-0 h-[60px] w-[60px] rounded-full group-hover:animate-ping`}
+          } absolute top-[-2px] left-[-2px] z-0 h-[60px] w-[60px] rounded-full `}
         />
       </button>
       <div className="relative mt-2 max-w-[74px] overflow-hidden text-xs">

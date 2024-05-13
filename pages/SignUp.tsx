@@ -52,7 +52,7 @@ const SignUp: NextPage = () => {
       </Head>
       <div className="jbjhj flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
         <div>
-          <div className="jghjhgj flex max-w-[350px] flex-col items-center justify-center border border-stone-300 bg-white">
+          <div className="jghjhgj flex  flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] pt-10 pb-5">
               <InstagramSVG  />
             </div>
@@ -124,8 +124,8 @@ const SignUp: NextPage = () => {
                 <button
                   className={`kghjjkhk ${
                     emailFormErrors === '' && passwordFormErrors === ''
-                      ? 'bg-[#0095f6]'
-                      : 'pointer-events-none cursor-default bg-[#abddff]'
+                      ? 'jcvhgfhg'
+                      : 'jhvghjg pointer-events-none cursor-default'
                   } my-5 w-full rounded-[4px]  px-2 py-1 text-sm font-semibold text-white`}
                   type="submit"
                 >
@@ -134,10 +134,10 @@ const SignUp: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="jhguytuv mt-2 flex max-w-[350px] justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="jhguytuv mt-2 flex  justify-center border border-stone-300 bg-white py-5 text-[14px]">
             <p>Have an account?</p>
             <button
-              className="ml-1 font-semibold text-[black]"
+              className="ml-1 font-semibold text-[Orange]"
               type="button"
               onClick={() => Router.push('/Login')}
             >

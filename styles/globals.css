@@ -588,6 +588,12 @@ main .msgs_cont .rchat {
 
 .kjghh:hover{
   color: black;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.jhgjhkkg:hover{
+  color: black;
 }
 
 
@@ -771,6 +777,7 @@ font-family: serif;
   background: linear-gradient(to top left, #117c86, #07084f);
   color: white;
   border: 2px solid white;
+  
 
 }
 
@@ -778,6 +785,7 @@ font-family: serif;
 .sudhfhbsh{
   border-radius: 10px;
   height: 30px;
+  color: rgb(0, 0, 0);
 }
 
 #kgjgjhk{
@@ -977,7 +985,7 @@ font-family: serif;
 @media (max-width: 767px) {
   
   .jbjhj{
-    height: 986px;
+    height: 980px;
     width: 620px;
   
   }
@@ -1016,40 +1024,58 @@ font-family: serif;
 
 .kjgkhkj{
   margin-bottom: 30px;
-  margin-left: 57px;
+  margin-left: 62px;
   margin-top: 5px;
-  font-size: 15px;
+ 
  
 }
 
 .kghj{
-  background: linear-gradient(to top left, #117c86, #07084f);
+  
   width: 300px;
   margin-left: 100px;
   height: 60px;
   border-radius: 19px;
   border: 3px solid white;
+
+
+}
+
+.jhvghjg{
+  background: linear-gradient(to top left, #86babe, #30317a);
+}
+
+.jcvhgfhg{
+  background: linear-gradient(to top left, #117c86, #07084f);
 }
 
 
-
 .kguiyrfyu{
-  border-radius: 17px;
-  height: 40px;
+  border-radius: 10px;
+  height: 60px;
   color: black;
 }
 
 
 
 .kghjjkhk{
-  background: linear-gradient(to top left, #117c86, #07084f);
+  
   width: 230px;
   height: 50px;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 19px;
   border: 3px solid white;
 }
+.ikjhfyhi{
+  padding-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+color: rgb(255, 255, 255);
 
+}
+.kjgsdjh{
+  color: #00fcf0;
+}
 
 }
 
@@ -1064,17 +1090,36 @@ font-family: serif;
 
 
 @media (min-width: 767px) {
-
+  
+  .jhvghjg{
+    background: linear-gradient(to top left, #86babe, #30317a);
+  }
+  
+  .jcvhgfhg{
+    background: linear-gradient(to top left, #117c86, #07084f);
+  }
+  
+  
+  .kguiyrfyu{
+    border-radius: 10px;
+    height: 60px;
+    color: black;
+  }
+  
+  
+  
   .jbjhj{
     height: 586px;
     width: 620px;
   
   }
 
+
+  
   .jghjhgj{
-    margin-left: 600px;
+    margin-left: 700px;
     height: 500px;
-    width: 630px;
+    width: 460px;
     background: linear-gradient(to top left, #1121b1, #00fcf0);
     color: white;
     border: 2px solid white;
@@ -1085,8 +1130,8 @@ font-family: serif;
   
   .jhguytuv{
     
-    margin-left: 600px;
-    width: 630px;
+    margin-left: 700px;
+    width: 460px;
       background: linear-gradient(to top left, #1121b1, #27bbe4);
       color: white;
       border: 2px solid white;
@@ -1100,23 +1145,23 @@ font-family: serif;
     border-radius: 10px;
     height: 50px;
     width: 390px;
-    margin-left: 57px;
+    margin-left: 0px;
     color: black;
     
   }
   
   .kjgkhkj{
-    margin-bottom: 30px;
-    margin-left: 57px;
+    margin-bottom: 10px;
+    margin-left: 6px;
     margin-top: 5px;
-    font-size: 15px;
+   
    
   }
   
   .kghj{
-    background: linear-gradient(to top left, #117c86, #07084f);
+  
     width: 300px;
-    margin-left: 100px;
+    margin-left: 38px;
     height: 60px;
     border-radius: 19px;
     border: 3px solid white;
@@ -1130,7 +1175,7 @@ font-family: serif;
 }
   
 .kghjjkhk{
-  background: linear-gradient(to top left, #117c86, #07084f);
+  margin-left:58px;
   width: 260px;
   height: 40px;
   border-radius: 10px;
@@ -1138,13 +1183,29 @@ font-family: serif;
 }
 
 .kghjjkhk{
-  background: linear-gradient(to top left, #117c86, #07084f);
+
   width: 260px;
   height: 50px;
   border-radius: 19px;
   border: 3px solid white;
 }
 
+.ikjhfyhi{
+  padding-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+color: rgb(255, 255, 255);
 
 }
+
+.kjgsdjh{
+  color: #00fcf0;
+}
+
+}
+
+
+
+
+
 

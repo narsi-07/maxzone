@@ -167,7 +167,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     }
                   >
                     <div className="group">
-                      <div className="sm:group-hover:animate-bounce">
+                      <div >
                         <HeartSVG fillColor="#a30844" height="24" width="24" />
                       </div>
                     </div>
@@ -187,7 +187,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     }
                   >
                     <div className="group">
-                      <div className="sm:group-hover:animate-bounce">
+                      <div >
                         <HeartHollow />
                       </div>
                     </div>

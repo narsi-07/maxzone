@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, AuthError } from 'firebase/auth';
 import guestAccess from './guestAccess';
 
 interface Props {
@@ -41,7 +41,7 @@ function handleSignIn({
         // Signed in
         setIsSubmit(true);
       })
-      .catch((error) => {
+      .catch((error: AuthError) => {
         setPasswordFormErrors(error.message);
       });
   } else if (passwordFormErrors === '' && emailFormErrors === '') {
@@ -50,8 +50,12 @@ function handleSignIn({
         // Signed in
         setIsSubmit(true);
       })
-      .catch((error) => {
-        setPasswordFormErrors(error.message);
+      .catch((error: AuthError) => {
+        if (error.code === 'auth/wrong-password') {
+          setPasswordFormErrors('Incorrect password. Please check your password and try again.');
+        } else {
+          setPasswordFormErrors(error.message);
+        }
       });
   }
 }

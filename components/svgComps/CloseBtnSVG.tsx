@@ -16,7 +16,7 @@ function CloseBtnSVG({
     <svg
       id="close"
       aria-label="Close"
-      color={darkMode ? darkColor : lightColor}
+      color={darkMode ? lightColor : darkColor }
       height={heightWidth}
       role="img"
       viewBox="0 0 24 24"

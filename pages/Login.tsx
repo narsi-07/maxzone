@@ -7,7 +7,7 @@ import useSetFormErrors from '../hooks/useSetFormErrors';
 import atoms from '../util/atoms';
 import useHandleSignIn from '../hooks/useHandleSignIn';
 import handleSignIn from '../util/handleSignIn';
-import InstagramSVG from '../components/svgComps/InstagramSVG';
+
 
 const Login: NextPage = () => {
   const [listeners] = useAtom(atoms.listeners);
@@ -38,9 +38,10 @@ const Login: NextPage = () => {
       <div className="jbjhj flex  w-full items-center justify-center ">
      
         <div>
+          
           <div className="jghjhgj flex  flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] py-10">
-              <InstagramSVG  />
+            <h1 className='ikjhfyhi'>Dazzl<span className='kjgsdjh'>one</span></h1>
             </div>
             <div className="w-full px-5 sm:px-10">
               <form
@@ -60,6 +61,7 @@ const Login: NextPage = () => {
                   })
                 }
               >
+              
                 <label htmlFor="signInPageEmail">
                   {' '}
                   <input
@@ -92,8 +94,8 @@ const Login: NextPage = () => {
                 <button
                   className={`${
                     emailFormErrors === '' && passwordFormErrors === ''
-                      ? 'bg-[#0095f6]'
-                      : 'pointer-events-none cursor-default bg-[#abddff]'
+                      ? 'jcvhgfhg'
+                      : 'jhvghjg pointer-events-none cursor-default bg-[#abddff]'
                   } kghj my-5   px-2 py-1 text-sm font-semibold `}
                   type="submit"
                 >
@@ -107,7 +109,7 @@ const Login: NextPage = () => {
                   <div className="w-full border-b border-stone-300" />
                 </div>
                 <button
-                  className="kghj mb-10 w-full rounded-[4px] bg-[#0095f6] px-2 py-1 text-sm font-semibold text-white"
+                  className="kghj jcvhgfhg mb-10 w-full rounded-[4px] bg-[#0095f6] px-2 py-1 text-sm font-semibold text-white"
                   type="button"
                   onClick={(e: any) =>
                     handleSignIn({
@@ -131,7 +133,7 @@ const Login: NextPage = () => {
           <div className="jhguytuv mt-2 flex justify-center border border-stone-300 bg-white py-5 text-[14px]">
             <p>Do not have an account?</p>
             <button
-              className="ml-1 font-semibold text-[black]"
+              className="ml-1 font-semibold text-[Orange]"
               type="button"
               onClick={() => Router.push('/SignUp')}
             >
