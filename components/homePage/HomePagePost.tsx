@@ -62,7 +62,7 @@ const HomePagePost = ({ username, index }: Props) => {
 
   const handleSharePost = () => {
     // Logic to open a popup window with share options for WhatsApp, Instagram, etc.
-    const shareURL = `https://example.com/post/${postDetails.postID}`;
+    const shareURL = `https://dazzlone.in/post/${postDetails.postID}`;
     const shareText = `Check out this post by ${postDetails.comments[0].username}: ${shareURL}`;
 
     // Open a new popup window with share options
