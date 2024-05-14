@@ -21,7 +21,7 @@ function AddNewPost({
 
   return (
     <div
-      className="ugjh fixed top-0 z-10 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
+      className="blur76 fixed top-0 z-10 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
       onClick={(e: any) => {
         if (e.target.id === 'closeAddPost') setAddPost(false);
       }}

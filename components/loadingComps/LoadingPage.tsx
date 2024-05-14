@@ -11,8 +11,8 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
       } flex h-screen w-full dark:bg-[#131313]  dark:[color-scheme:dark]`}
     >
       <Head>
-        <title>ShareTrendy</title>
-        <meta name="description" content="ShareTrendy" />
+        <title>Dazzlone</title>
+        <meta name="description" content="Dazzlone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       {checkingUserRoute ? <Header page="Profile" /> : ''}

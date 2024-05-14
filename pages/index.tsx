@@ -35,23 +35,24 @@ console.log('uswe',userdetails)
   <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShareTrendy - Share Market Social Media Platform</title>
-  <meta name="description" content="ShareTrendy is a social media platform that provides users with information, discussions, and insights about the share market. Come and enhance your investment knowledge." />
-  <meta name="keywords" content="ShareTrendy, share market, social media, stock market, investment, trading, discussion" />
-  <meta name="author" content="Narsi" />
+  <title>Dazzlone -  social networking platform</title>
+  <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
+<meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
+<meta name="author" content="Narsi jangid"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <meta property="og:title" content="ShareTrendy - Share Market Social Media Platform" />
-  <meta property="og:description" content="ShareTrendy is a social media platform that provides users with information, discussions, and insights about the share market. Come and enhance your investment knowledge." />
+  <meta property="og:title" content="Dazzlone -  Social Media Platform" />
+  <meta property="og:description" content="Dazzlone is a social media platform that provides users with information, discussions, and insights about the share market. Come and enhance your investment knowledge." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.sharetrendy.com" />
-  <meta property="og:image" content="https://www.sharetrendy.com/image.jpg" />
+  <meta property="og:url" content="https://www.Dazzlone.in" />
+  <meta property="og:image" content="https://www.Dazzlone.com/image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ShareTrendy - Share Market Social Media Platform" />
-  <meta name="twitter:description" content="ShareTrendy is a social media platform that provides users with information, discussions, and insights about the share market. Come and enhance your investment knowledge." />
-  <meta name="twitter:image" content="https://www.sharetrendy.com/image.jpg" />
+  <meta name="twitter:title" content="Dazzlone -  Social Media Platform" />
+  <meta name="twitter:description" content="Dazzlone is a social media platform that provides users with information, discussions, and insights about the share market. Come and enhance your investment knowledge." />
+  <meta name="twitter:image" content="https://www.Dazzlone.com/image.jpg" />
 
-  <link rel="canonical" href="https://www.sharetrendy.com" />
+  <link rel="canonical" href="https://www.Dazzlone.com" />
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </Head>

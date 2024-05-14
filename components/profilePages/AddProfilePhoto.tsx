@@ -16,7 +16,7 @@ function AddProfilePhoto({
   const [userNotifications] = useAtom(atoms.userNotifications);
 
   return (
-    <div className="ugjh fixed top-0 z-50 flex h-full w-full  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
+    <div className="blur76 fixed top-0 z-50 flex h-full w-full  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
       <div
         className={
           loading ? 'animate-spin rounded-full bg-[#000000de] p-2 ' : 'hidden'
@@ -49,7 +49,7 @@ function AddProfilePhoto({
           >
 
             <div className='editprofileimage'>
-            <button type='button' className='jkgjgjg1'> Add new picture</button>
+            <div  className='jkgjgjg1'> Add new picture</div>
            
             </div>
           

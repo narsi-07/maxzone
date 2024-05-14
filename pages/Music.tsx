@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
 

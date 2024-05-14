@@ -119,8 +119,11 @@ useEffect(() => {
   return (
     <div className="h-[100vh] overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
-        <title>Profile • ShareTrendy photos and videos</title>
-        <meta name="description" content="Dazzlone, social media app dazzlone" />
+        <title>Profile • Dazzlone photos and videos</title>
+        <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
+<meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
+<meta name="author" content="Narsi jangid"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
       <Header page="Profile" />

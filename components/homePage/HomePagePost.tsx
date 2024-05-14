@@ -61,8 +61,8 @@ const HomePagePost = ({ username, index }: Props) => {
   };
 
   const handleSharePost = () => {
-    // Assuming postDetails.imgURL contains the URL of the image
-    const shareURL = postDetails.imgURL;
+    // Logic to open a popup window with share options for WhatsApp, Instagram, etc.
+    const shareURL = `https://example.com/post/${postDetails.postID}`;
     const shareText = `Check out this post by ${postDetails.comments[0].username}: ${shareURL}`;
 
     // Open a new popup window with share options
@@ -77,8 +77,7 @@ const HomePagePost = ({ username, index }: Props) => {
       'Share Post',
       `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=${popupWidth}, height=${popupHeight}, top=${top}, left=${left}`
     );
-};
-
+  };
 
   return (
     <div>

@@ -977,21 +977,24 @@ font-family: serif;
   
 }
 
-.ugjh{
+.blur76{
   
 
 backdrop-filter: blur(9px); /* Adjust the blur value as needed */
 background-color: rgba(255, 255, 255, 0.1); /* Optional: fallback background color */
 }
 
-.jkgjgjg1{
+.jkgjgjg1 {
   margin-left: 50px;
   color: rgb(0, 255, 4);
   background: linear-gradient(to top left, #117c86, #07084f);
   height: 30px;
   width: 220px;
   border-radius: 20px;
+  text-align: center; /* This centers the text horizontally */
+  line-height: 30px; /* This centers the text vertically */
 }
+
 .hjfhd3{
   margin-left: 30px;
   color: rgb(255, 255, 255);
