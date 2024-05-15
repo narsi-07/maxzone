@@ -27,7 +27,7 @@ function UnfollowUser({
   return (
     <div
       id="close"
-      className="fixed top-0 left-0 z-50 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
+      className="blur76 fixed top-0 left-0 z-50 flex h-full w-full cursor-default  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]"
       role="button"
       tabIndex={0}
       onClick={(e: any) => {
@@ -49,14 +49,14 @@ function UnfollowUser({
       >
         <CloseBtnSVG lightColor="white" darkColor="white" heightWidth="18" />
       </div>
-      <div className="flex w-[400px] flex-col items-center justify-center rounded-xl bg-white text-center text-sm font-normal dark:border dark:border-stone-300 dark:bg-[#000000]">
+      <div className="jhgkhk flex w-[400px] flex-col items-center justify-center rounded-xl bg-white text-center text-sm font-normal dark:border dark:border-stone-300 dark:bg-[#000000]">
         {imgURL === '' ? (
           <div className="my-9 h-[90px] w-[90px]">
             <ProfilePicSVG strokeWidth="1" />
           </div>
         ) : (
           <Image
-            className="my-9 h-[90px] w-[90px] rounded-full object-cover"
+            className="jhgj my-9 h-[90px] w-[90px] rounded-full object-cover"
             src={imgURL}
             alt="avatar"
             width="90"
@@ -65,7 +65,7 @@ function UnfollowUser({
         )}
 
         <p className="px-6 pb-7">
-          If you change your mind, you can always follow @{username} again.
+        Hey there! If you ever feel like rejoining the journey with @{username}, the follow button is right here waiting for you. ✨
         </p>
         <div
           className="w-full border-y border-stone-300 py-3  font-semibold  text-[#ED4956] dark:border-stone-700"

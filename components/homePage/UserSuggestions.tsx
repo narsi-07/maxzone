@@ -53,7 +53,7 @@ function UserSuggestions() {
         </div>
         <Link href={`/${userDetails?.displayName}`}>
           <a>
-            <button type="button" onMouseDown={playMouseClickSound} className="cursor-pointer text-xs font-semibold text-[#07a69e]">
+            <button type="button" onMouseDown={playMouseClickSound} className="cursor-pointer text-xs font-semibold text-[green]">
               Your profile
             </button>
           </a>

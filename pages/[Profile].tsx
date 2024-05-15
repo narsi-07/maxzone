@@ -211,7 +211,7 @@ useEffect(() => {
                           })
                         }
                       >
-                        <p className="bg-[#0095F6] py-1 px-6 text-white">
+                        <p className="hgjhgjgj py-1 px-6 text-white">
                           Follow
                         </p>
                       </button>

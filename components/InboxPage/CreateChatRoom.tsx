@@ -25,7 +25,7 @@ function CreateChatRoom({ setCreateChatRoom }: Props) {
     React.useState<notificationTypes>({});
 
   return (
-    <div className=" fixed top-0 left-0 z-50 flex h-[100vh] w-full items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
+    <div className="blur76 fixed top-0 left-0 z-50 flex h-[100vh] w-full items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
       <div className="jgkhkjhkh w-[400px] rounded-xl bg-white dark:border dark:border-stone-300 dark:bg-[#000000]">
         <div className="flex items-center justify-between border-b border-stone-300 p-3 dark:border-stone-700">
           <button aria-label='button' onClick={() => setCreateChatRoom(false)} type="button">
