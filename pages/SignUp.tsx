@@ -8,7 +8,6 @@ import atoms from '../util/atoms';
 import useHandleSignIn from '../hooks/useHandleSignIn';
 import useSetFormErrors from '../hooks/useSetFormErrors';
 import handleCreateUser from '../util/handleCreateUser';
-import InstagramSVG from '../components/svgComps/InstagramSVG';
 
 const SignUp: NextPage = () => {
   const [email, setEmail] = React.useState('');
@@ -44,10 +43,11 @@ const SignUp: NextPage = () => {
   }
 
   return (
+    <div style={{ backgroundColor: 'black' }}>
     <div>
       <Head>
         <title>Dazzlone • Sign up</title>
-        <meta name="description" content="Dazzlone" />
+      
         <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
 <meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
 <meta name="author" content="Narsi jangid"/>
@@ -55,14 +55,13 @@ const SignUp: NextPage = () => {
 
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div className="jbjhj flex min-h-[100vh] w-full items-center justify-center bg-[#fafafa]">
+      <div style={{ backgroundColor: 'black' }} className="jbjhj flex min-h-[100vh]  items-center justify-center bg-[#fafafa]">
         <div>
           <div className="jghjhgj flex  flex-col items-center justify-center border border-stone-300 bg-white">
-            <div className="h-auto w-[175px] pt-10 pb-5">
-              <InstagramSVG  />
-            </div>
+        
             <div className="px-10 pb-5 text-center font-semibold text-[#8e8e8e]">
-              <p>Sign up to see photos and videos from your friends.</p>
+            <h1 className='ikjhfyhi'>Registra<span className='kjgsdjh'>tion</span></h1>
+           
             </div>
             <div className="w-full px-10">
               <form
@@ -151,6 +150,7 @@ const SignUp: NextPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

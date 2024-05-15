@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-
+import Header from '../components/header/Header';
 
 
 const Gurudev = () => {
@@ -113,10 +113,6 @@ const Gurudev = () => {
   return (
     <>
       <Head>
-      <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
-<meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
-<meta name="author" content="Narsi jangid"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link
           href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
           rel="stylesheet"
@@ -127,7 +123,7 @@ const Gurudev = () => {
         />
         {/* <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> */}
       </Head>
-    
+      <Header page="Gurudev" />
       <main>
         <div className="topper">
           {/* <div className="icon"></div> */}
