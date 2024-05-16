@@ -59,7 +59,7 @@ function ViewAllStories({
       </button>
       <button
       aria-label='button'
-        className="absolute top-6 right-6 z-[100]"
+        className="absolute top-3 right-3 z-[100]"
         type="button"
         onClick={() => {
           setOpenStories(false);
@@ -69,7 +69,7 @@ function ViewAllStories({
         <CloseBtnSVG lightColor="white" darkColor="white" heightWidth="24" />
       </button>
       <div
-        className="flex h-full w-max cursor-default  items-center gap-[3vw] pl-[20vw] transition-all duration-500 lg:pl-[36vw]"
+        className="flex h-full w-max cursor-default  items-center gap-[3vw] pl-[2vw] transition-all duration-500 lg:pl-[36vw]"
         style={{
           transform: `translate(calc(${positionIndex} * ${width}vw))`,
         }}
@@ -179,9 +179,9 @@ function ViewAllStories({
                 <Image
                   className={`${
                     storyUsername === userName
-                      ? 'h-[80vh] w-[60vw] lg:h-[95vh] lg:w-[27vw]'
+                      ? 'h-[100vh] w-[95vw] lg:h-[95vh] lg:w-[27vw]'
                       : 'h-[40vh] w-[20vw] bg-[#202020] lg:w-[10vw]'
-                  } select-none bg-[#3f3f3f] object-cover transition-all duration-500`}
+                  } hvjgjg select-none bg-[#3f3f3f] object-cover transition-all duration-500`}
                   src={stories[userName]}
                   alt="story"
                   height="0"
