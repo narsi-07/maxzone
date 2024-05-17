@@ -29,7 +29,7 @@ const Login: NextPage = () => {
   useHandleSignIn({ isSubmit });
 
   return (
-    <div className='kjsdkjknh'>
+    <div style={{ backgroundColor: 'black' }}>
       <Head>
         <title>Dazzlone • Login</title>
              <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
@@ -38,8 +38,8 @@ const Login: NextPage = () => {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
       </Head>
-      <div>
-      <div className="jbjhj flex  w-full items-center justify-center ">
+      <div >
+      <div style={{ backgroundColor: 'black' }} className="jbjhj flex  w-full items-center justify-center ">
      
         <div>
           
