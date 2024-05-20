@@ -1039,117 +1039,95 @@ color: white;
 
 
 
-
 @media (max-width: 767px) {
-  
-
-.jghjhgj{
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to top left, #18a3bca5, #0000005a);
-  color: white;
-  border: 2px solid white;
-  border-radius: 20px;
-
-
-
-}
-
-.jhguytuv{
-  
-   
+  .jghjhgj {
+    height: 100%;
     width: 100%;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
     color: white;
     border: 2px solid white;
     border-radius: 20px;
-  font-size: 20px;
-  box-shadow: 2px 3px 44px black;
+    padding: 15px; /* Added padding for better spacing */
+  }
+
+  .jhguytuv {
+    width: 100%;
+    background: linear-gradient(to top left, #18a3bca5, #0000005a);
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 2px 3px 44px black;
+    padding: 10px; /* Added padding for consistency */
+  }
+
+  .gkhljkji {
+    border-radius: 10px;
+    height: 50px;
+    width: 100%; /* Changed to full width */
+    color: black;
+    margin-bottom: 15px; /* Added margin for spacing */
+  }
+
+  .kjgkhkj {
+    margin-bottom: 30px;
+    margin-left: 7px;
+    margin-top: 5px;
+  }
+
+  .kghj {
+    width: calc(100% - 60px); /* Adjusted width for responsiveness */
+    margin-left: 30px;
+    height: 60px;
+    border-radius: 19px;
+    border: 3px solid white;
+  }
+
+  .jhvghjg {
+    background: #737676;
+  }
+
+  .jcvhgfhg {
+    background: linear-gradient(to top left, #117c86, #07084f);
+  }
+
+  .kguiyrfyu {
+    border-radius: 10px;
+    height: 60px;
+    color: black;
+    width: 100%; /* Changed to full width */
+  }
+
+  .kghjjkhk {
+    width: calc(100% - 200px); /* Adjusted width for responsiveness */
+    height: 50px;
+    margin-left: 100px;
+    border-radius: 19px;
+    border: 3px solid white;
+  }
+
+  .ikjhfyhi {
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  .kjgsdjh {
+    color: #00ffff;
+  }
+
+  .jhvghjg {
+    background: #737676;
+  }
 }
 
 
-.gkhljkji{
-  border-radius: 10px;
-  height: 50px;
-  width: 340px;
-
-  color: black;
-  
-}
-
-.kjgkhkj{
-  margin-bottom: 30px;
-  margin-left: 7px;
-  margin-top: 5px;
- 
- 
-}
-
-.kghj{
-  
-  width: 300px;
-  margin-left: 50px;
-  height: 60px;
-  border-radius: 19px;
-  border: 3px solid white;
-
-
-}
-
-.jhvghjg{
-  background:  #737676;
-}
-
-.jcvhgfhg{
-  background: linear-gradient(to top left, #117c86, #07084f);
-}
-
-
-.kguiyrfyu{
-  border-radius: 10px;
-  height: 60px;
-  color: black;
-}
-
-
-
-.kghjjkhk{
-  
-  width: 230px;
-  height: 50px;
-  margin-left: 100px;
-  border-radius: 19px;
-  border: 3px solid white;
-}
-.ikjhfyhi{
-  padding-bottom: 20px;
-  font-size: 40px;
-  font-weight: bold;
-color: rgb(255, 255, 255);
-
-}
-
-.kjgsdjh{
-  color: #00ffff;
-}
-.jhvghjg{
-  background:  #737676;
-  margin-left: 64px;
-}
-
-}
-.kjhkjhk{
-  height: 100vh;
-  width: 100vw;
-}
 
 
 
 
 @media (min-width: 767px) {
-  
-
-
   
   .jcvhgfhg{
     background: linear-gradient(to top left, #117c86, #07084f);
@@ -1163,13 +1141,8 @@ color: rgb(255, 255, 255);
   }
   
   
-  
-
-
-
-  
   .jghjhgj{
-    
+    margin-top: 8%;
     height: 500px;
     width: 460px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
@@ -1181,8 +1154,6 @@ color: rgb(255, 255, 255);
   }
   
   .jhguytuv{
-    
-    
     width: 460px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
       color: white;
