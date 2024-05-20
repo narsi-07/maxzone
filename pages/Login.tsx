@@ -29,7 +29,7 @@ const Login: NextPage = () => {
   useHandleSignIn({ isSubmit });
 
   return (
-    <div style={{ backgroundColor: 'black' }}>
+    <div className='kjhkjhk' style={{ backgroundColor: 'black' }}>
       <Head>
         <title>Dazzlone • Login</title>
              <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>

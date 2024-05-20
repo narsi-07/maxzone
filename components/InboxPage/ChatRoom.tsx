@@ -11,6 +11,7 @@ import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 import atoms from '../../util/atoms';
 import useHandleEmojiPopUp from '../../hooks/useHandleEmojiPopUp';
 import sendChatRoomMessage from '../../util/handleSendChatRoomMessage';
+import DazzloneLoading from '../svgComps/DazzloneLoading';
 
 
 const playMouseClickSound = () => {
@@ -58,14 +59,7 @@ function ChatRoom({ chatRoomID,move, userID, activeChat, activeChatId }: Props) 
         {avatarURL === '' || !avatarURL ? (
           <div className="h-7 w-7">
             <ProfilePicSVG strokeWidth="1.5" />
-            <picture>
-              <img
-                // unfortuanetly this image is needed to force map loading state to be triggered
-                className="h-0 w-0 opacity-0"
-                src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
-                alt="avatar"
-              />
-            </picture>
+         <DazzloneLoading/>
           </div>
         ) : (
           <Link href={`/${chatName}`}>

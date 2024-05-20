@@ -55,7 +55,7 @@ function ProgressBar({
           <button
           aria-label='button'
             type="button"
-            className="absolute top-11 right-10 z-10"
+            className="absolute top-14 right-10 z-10"
             onClick={() => {
               setProgress(
                 (widthRef.current!.offsetWidth /
@@ -71,7 +71,7 @@ function ProgressBar({
           <button
           aria-label='button'
             type="button"
-            className="absolute top-11 right-10 z-10"
+            className="absolute top-14 right-10 z-10"
             onClick={() => {
               setPlayStatus(true);
             }}

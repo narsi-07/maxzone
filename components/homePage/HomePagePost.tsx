@@ -19,6 +19,10 @@ interface Props {
   username: string;
   index: number;
 }
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
 
 const HomePagePost = ({ username, index }: Props) => {
   const [isUserVerified, setIsUserVerified] = useState(false);
@@ -82,7 +86,11 @@ const HomePagePost = ({ username, index }: Props) => {
   return (
     <div>
       {postDetails?.comments ? (
-        <div className="my-1 overflow-hidden rounded-lg border border-stone-300 bg-white dark:border-stone-700">
+        <div   
+        role="button"
+        tabIndex={0} // This allows the element to receive keyboard focus
+        onMouseDown={playMouseClickSound}
+        className="my-1 overflow-hidden rounded-lg border border-stone-300 bg-white dark:border-stone-700">
           {postPopUp && (
             <PostPopUp
               postInformation={postDetails}

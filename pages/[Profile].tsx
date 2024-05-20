@@ -28,6 +28,11 @@ import UserDoesNotExist from '../components/profilePages/UserDoesNotExist';
 import VerificationBadge from '../components/VerificationBadge';
 
 
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 // Define the Profile component
 const Profile: NextPage = () => {
   const router = useRouter();
@@ -117,7 +122,10 @@ useEffect(() => {
   }
 
   return (
-    <div className="h-[100vh] overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
+    <div  role="button"
+    tabIndex={0} // This allows the element to receive keyboard focus
+    onMouseDown={playMouseClickSound}
+    className="h-[100vh] overflow-y-scroll bg-[#fafafa] text-[#231f20] dark:bg-[#131313] dark:text-slate-100 dark:[color-scheme:dark]">
       <Head>
         <title>Profile • Dazzlone photos and videos</title>
         <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
@@ -129,7 +137,7 @@ useEffect(() => {
       <Header page="Profile" />
       {addPhoto ? <AddProfilePhoto setAddPhoto={setAddPhoto} /> : <div />}
       <div className="mx-auto max-w-[935px] pt-6 sm:pt-8">
-        <div className="flex items-stretch border-b border-stone-300 pb-7 dark:border-stone-700 sm:pb-11">
+        <div className=" flex items-stretch border-b border-stone-300 pb-7 dark:border-stone-700 sm:pb-11">
           <button
             className="relative mr-7 min-w-[80px] sm:mr-10 sm:grow-[1]"
             onClick={() =>

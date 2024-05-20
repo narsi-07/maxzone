@@ -5,6 +5,7 @@ import DragPhotosVideos from '../svgComps/DragPhotosVideos';
 import ReturnArrow from '../svgComps/ReturnArrow';
 import atoms from '../../util/atoms';
 import { handleSelectedImage, handleSubmit } from '../../util/handleAddNewPost';
+import DazzloneLoading from '../svgComps/DazzloneLoading';
 
 function AddNewPost({
   setAddPost,
@@ -33,15 +34,7 @@ function AddNewPost({
       id="closeAddPost"
     >
       {loading ? (
-        <div className="animate-spin rounded-full bg-[#000000de] p-2">
-          <picture>
-            <img
-              className="h-10 w-10"
-              src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
-              alt="instagram loading"
-            />
-          </picture>
-        </div>
+      <DazzloneLoading/>
       ) : (
         <div>
           <button

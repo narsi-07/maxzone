@@ -4,6 +4,7 @@ import handleUploadImage from '../../util/handleUploadImage';
 import handleUpdateProfilePhoto from '../../util/handleUpdateProfilePhoto';
 import handleRemoveProfilePhoto from '../../util/handleRemoveProfilePhoto';
 import atoms from '../../util/atoms';
+import DazzloneLoading from '../svgComps/DazzloneLoading';
 
 function AddProfilePhoto({
   setAddPhoto,
@@ -19,19 +20,13 @@ function AddProfilePhoto({
     <div className="blur76 fixed top-0 z-50 flex h-full w-full  items-center justify-center bg-[#0000008f] dark:bg-[#000000d7]">
       <div
         className={
-          loading ? 'animate-spin rounded-full bg-[#000000de] p-2 ' : 'hidden'
+          loading ? '  p-2 ' : 'hidden'
         }
       >                            
 
 
                       {/* Loding image */}
-        <picture>
-          <img
-            className="h-10 w-10"
-            src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
-            alt="instagram loading"
-          />
-        </picture>
+      <DazzloneLoading/>
       </div>
       <div
         className={`jhgkhk ${

@@ -1,6 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
+
+const playMouseClickSound = () => {
+  const mouseclick = new Audio('https://uploads.sitepoint.com/wp-content/uploads/2023/06/1687569402mixkit-fast-double-click-on-mouse-275.wav');
+  mouseclick.play();
+};
+
 const songs =[
   {
     path: 'https://raw.githubusercontent.com/ustabasiibrahim/music-player/master/assets/music/1.mp3',
@@ -173,7 +179,11 @@ function App() {
   }, [currentSongIndex, likesCounts]);
 
   return (
-    <div className="App" style={{ backgroundColor: 'black', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+    <div 
+    role="button"
+    tabIndex={0} // This allows the element to receive keyboard focus
+    onMouseDown={playMouseClickSound}
+     className="App" style={{ backgroundColor: 'black', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
       <img
         src={songs[currentSongIndex].cover}
         alt="Song Cover"
@@ -296,7 +306,7 @@ function App() {
         </button>
       </div>
       <div style={{ position: 'absolute', bottom: 20, left: 20 }}>
-        <button type="button" id='nextbuttonsongs' onClick={playPreviousSong} style={{ color: 'white', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>Back</button>
+        <button  type="button" id='nextbuttonsongs' onClick={playPreviousSong} style={{ color: 'white', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>Back</button>
       </div>
       <div style={{ position: 'absolute', bottom: 20, right: 20 }}>
         <button type="button" id='nextbuttonsongs' onClick={playRandomSong} style={{ color: 'white', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>Next</button>

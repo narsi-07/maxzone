@@ -619,8 +619,11 @@ margin-bottom: 30px;
   background: linear-gradient(15deg, #0495abd0 0%, #092991d8 100%);
   border-top: 3px solid white;
   border-bottom: none;
-
-
+}
+.kjdyf{
+  background: linear-gradient(15deg, #0495abd0 0%, #092991d8 100%);
+  border-bottom: none;
+  
 }
 
 .messagebordedesign{
@@ -1031,6 +1034,7 @@ color: white;
 
 .hgjhgjgj{
   background: linear-gradient(to top left, #00d9ff, #0262d1);
+  
 }
 
 
@@ -1038,26 +1042,23 @@ color: white;
 
 @media (max-width: 767px) {
   
-  .jbjhj{
-    height: 780px;
-    width: 480px;
-  
-  }
+
 .jghjhgj{
-  height: 600px;
-  width: 430px;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(to top left, #18a3bca5, #0000005a);
   color: white;
   border: 2px solid white;
   border-radius: 20px;
-  box-shadow: 2px 3px 44px black;
+
+
 
 }
 
 .jhguytuv{
   
    
-    width: 430px;
+    width: 100%;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
     color: white;
     border: 2px solid white;
@@ -1070,7 +1071,7 @@ color: white;
 .gkhljkji{
   border-radius: 10px;
   height: 50px;
-  width: 390px;
+  width: 340px;
 
   color: black;
   
@@ -1137,16 +1138,18 @@ color: rgb(255, 255, 255);
 }
 
 }
-
+.kjhkjhk{
+  height: 100vh;
+  width: 100vw;
+}
 
 
 
 
 @media (min-width: 767px) {
   
-  .jhvghjg{
-    background:  #737676;
-  }
+
+
   
   .jcvhgfhg{
     background: linear-gradient(to top left, #117c86, #07084f);
@@ -1161,16 +1164,12 @@ color: rgb(255, 255, 255);
   
   
   
-  .jbjhj{
-    height: 586px;
-    width: 620px;
-  
-  }
+
 
 
   
   .jghjhgj{
-    margin-left: 680px;
+    
     height: 500px;
     width: 460px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
@@ -1183,7 +1182,7 @@ color: rgb(255, 255, 255);
   
   .jhguytuv{
     
-    margin-left: 680px;
+    
     width: 460px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
       color: white;

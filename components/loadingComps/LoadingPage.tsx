@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../header/Header';
 
+
 function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
   return (
     <div
@@ -26,11 +27,11 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
 
                     {/* LOADING IMAGE */}
 
-        <picture>
+          <picture>
           <img
-            className="h-24 w-24 sm:h-auto"
+            className="h-0 w-0 opacity-0"
             src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
-            alt="loading"
+            alt="avatar"
           />
         </picture>
       </div>
