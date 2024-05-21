@@ -98,14 +98,16 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
           </div>
           <div className="flex-grow overflow-y-auto bg-[#fafafa] text-sm dark:bg-[#131313] dark:[color-scheme:dark] ">
             <div ref={chatBox}>
-              {postInformation.comments.map((commentInfo, index) =>
+              {postInformation.comments.map((commentInfo) =>
                 commentInfo.text === '' ? (
                   ''
                 ) : (
                   <div
-                    key={`post${index}`}
-                    className="flex px-4 py-1 sm:p-4"
-                  >
+                  key={`${commentInfo.username}-${commentInfo.text}`}
+                  className="flex px-4 py-1 sm:p-4"
+                >
+                
+                
                     <div className="flex-shrink-0">
                       <Link href={`/${commentInfo.username}`}>
                         <a>

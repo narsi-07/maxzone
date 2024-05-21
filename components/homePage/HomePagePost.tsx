@@ -259,18 +259,20 @@ const HomePagePost = ({ username, index }: Props) => {
                 </p>
               )}
               {postDetails.likes.length > 1 && (
-                <span
-                  onClick={handleLikesPopup}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      handleLikesPopup();
-                    }
-                  }}
-                  tabIndex={0}
-                  role="button"
-                  className="cursor-pointer ml-1"
-                >
-                </span>
+        <span
+        onClick={handleLikesPopup}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            handleLikesPopup();
+          }
+        }}
+        tabIndex={0}
+        role="button"
+        className="cursor-pointer ml-1"
+        aria-label="Open likes popup"
+      />
+      
+                
               )}
             </div>
             {showLikesPopup && (
