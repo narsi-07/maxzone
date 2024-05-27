@@ -34,7 +34,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
     <div className="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-[#000000a4]">
       <div
         aria-label="button"
-        className="fixed top-10 right-10"
+        className="fixed top-4 right-4 sm:top-10 sm:right-10"
         role="button"
         tabIndex={0}
         onClick={() => {
@@ -56,21 +56,12 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
         </div>
       </div>
 
-      <div className="jhghjfj mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
+      <div className="mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
         {postInformation.imgURL ? (
-          <div className="flex h-[50%] w-full items-center justify-center bg-black sm:h-full lg:w-[50%]">
-            <Image
-              className="h-full w-full select-none object-contain sm:h-[520px] lg:w-[520px]"
-              src={postInformation.imgURL}
-              alt="post"
-              width="0"
-              height="0"
-              sizes="(min-width: 40em) 40vw, 100vw"
-            />
-          </div>
+         ''
         ) : null}
-        <div className={`flex h-[50%] w-full flex-col bg-white dark:bg-[#1c1c1c] sm:h-full ${postInformation.imgURL ? 'lg:w-[50%]' : 'lg:w-full'}`}>
-          <div className="flex items-center justify-start gap-3 border-b border-stone-200 py-1 px-4 dark:border-stone-700 sm:p-4 ">
+        <div className={`flex ${postInformation.imgURL ? 'h-[100%]' : 'h-[80%]'} w-full flex-col bg-white dark:bg-[#1c1c1c] sm:h-full ${postInformation.imgURL ? 'lg:w-[50%]' : 'lg:w-full'}`}>
+          <div className="flex items-center justify-start gap-3 border-b border-stone-200 py-2 px-4 dark:border-stone-700 sm:p-4">
             <Link href={postUserDetails.username}>
               <a>
                 {!postUserDetails.avatarURL ? (
@@ -96,18 +87,16 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
               </a>
             </Link>
           </div>
-          <div className="flex-grow overflow-y-auto bg-[#fafafa] text-sm dark:bg-[#131313] dark:[color-scheme:dark] ">
+          <div className="flex-grow overflow-y-auto bg-[#fafafa] text-sm dark:bg-[#131313] dark:[color-scheme:dark] max-h-full">
             <div ref={chatBox}>
               {postInformation.comments.map((commentInfo) =>
                 commentInfo.text === '' ? (
                   ''
                 ) : (
                   <div
-                  key={`${commentInfo.username}-${commentInfo.text}`}
-                  className="flex px-4 py-1 sm:p-4"
-                >
-                
-                
+                    key={`${commentInfo.username}-${commentInfo.text}`}
+                    className="flex px-4 py-2 sm:p-4"
+                  >
                     <div className="flex-shrink-0">
                       <Link href={`/${commentInfo.username}`}>
                         <a>
@@ -134,7 +123,6 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                             <b>{commentInfo.username}</b>
                           </a>
                         </Link>
-
                         {` - ${commentInfo.text}`}
                       </p>
                       <p className="pt-1 text-xs text-[#a5a5a5]">
@@ -148,13 +136,13 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
             <div ref={latestMessageRef} />
           </div>
           <div className="dark:bg-[#1c1c1c]">
-            <div className="border-t border-stone-200 px-5 pt-1 pb-1 dark:border-stone-700 sm:pt-4">
+            <div className="border-t border-stone-200 px-4 py-2 dark:border-stone-700 sm:px-5 sm:py-4">
               <div className="mb-1 flex gap-4 sm:mb-3">
                 {userNotifications?.likedPosts!.includes(
                   postInformation.postID
                 ) ? (
                   <button
-                    aria-label='button'
+                    aria-label="button"
                     id="unlike"
                     type="button"
                     onClick={(e) =>
@@ -167,14 +155,14 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     }
                   >
                     <div className="group">
-                      <div >
+                      <div>
                         <HeartSVG fillColor="#a30844" height="24" width="24" />
                       </div>
                     </div>
                   </button>
                 ) : (
                   <button
-                    aria-label='button'
+                    aria-label="button"
                     id="like"
                     type="button"
                     onClick={(e) =>
@@ -187,7 +175,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     }
                   >
                     <div className="group">
-                      <div >
+                      <div>
                         <HeartHollow />
                       </div>
                     </div>
@@ -220,7 +208,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                   </div>
                 )}
               </div>
-              <p className=" text-xs text-[#a5a5a5] sm:pt-2">
+              <p className="text-xs text-[#a5a5a5] sm:pt-2">
                 {new Date(
                   postInformation.createdAt.seconds * 1000
                 ).toDateString()}
@@ -238,47 +226,6 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
 }
 
 export default PostPopUp;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -312,7 +259,6 @@ export default PostPopUp;
 // function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
 //   const [userNotifications] = useAtom(atoms.userNotifications);
 //   const [userDetails] = useAtom(atoms.userDetails);
- 
 
 //   const chatBox = React.useRef<HTMLDivElement>(null);
 //   const latestMessageRef = React.useRef<HTMLDivElement>(null);
@@ -324,45 +270,45 @@ export default PostPopUp;
 
 //   return (
 //     <div className="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-[#000000a4]">
-//      <div
-//   aria-label="button"
-//   className="fixed top-10 right-10"
-//   role="button"
-//   tabIndex={0}
-//   onClick={() => {
-//     setPostPopUp(false);
-//     document.body.style.overflow = 'initial';
-//   }}
-//   onKeyDown={(e) => {
-//     // Check if the Enter key is pressed
-//     if (e.key === 'Enter') {
-//       setPostPopUp(false);
-//       document.body.style.overflow = 'initial';
-//     }
-//   }}
-// >
-//   <div
-//     id="close"
-//     className="rounded-full bg-[#2525257e] p-1 sm:bg-transparent"
-//   >
-//     <CloseBtnSVG lightColor="white" darkColor="white" heightWidth="18" />
-//   </div>
-// </div>
-
-//       <div className="jhghjfj mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
-//         <div className="flex h-[50%] w-full items-center justify-center bg-black sm:h-full lg:w-[50%]">
-//           <Image
-//             className="h-full w-full select-none object-contain sm:h-[520px] lg:w-[520px]"
-//             src={postInformation.imgURL}
-//             alt="post"
-//             width="0"
-//             height="0"
-//             sizes="(min-width: 40em) 40vw,
-//             100vw"
-//           />
+//       <div
+//         aria-label="button"
+//         className="fixed top-4 right-4 sm:top-10 sm:right-10"
+//         role="button"
+//         tabIndex={0}
+//         onClick={() => {
+//           setPostPopUp(false);
+//           document.body.style.overflow = 'initial';
+//         }}
+//         onKeyDown={(e) => {
+//           if (e.key === 'Enter') {
+//             setPostPopUp(false);
+//             document.body.style.overflow = 'initial';
+//           }
+//         }}
+//       >
+//         <div
+//           id="close"
+//           className="rounded-full bg-[#2525257e] p-1 sm:bg-transparent"
+//         >
+//           <CloseBtnSVG lightColor="white" darkColor="white" heightWidth="18" />
 //         </div>
-//         <div className="flex h-[50%] w-full flex-col bg-white dark:bg-[#1c1c1c] sm:h-full lg:w-[50%]">
-//           <div className="flex items-center justify-start gap-3 border-b border-stone-200 py-1 px-4 dark:border-stone-700 sm:p-4 ">
+//       </div>
+
+//       <div className="mx-2 flex h-full max-h-[calc(100vh-80px)] w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-md dark:border dark:border-stone-700 sm:max-h-[520px] sm:flex-row md:mx-6 lg:mx-20">
+//         {postInformation.imgURL ? (
+//           <div className="flex h-[50%] w-full items-center justify-center bg-black sm:h-full lg:w-[50%]">
+//             <Image
+//               className="h-full w-full select-none object-contain sm:h-[520px] lg:w-[520px]"
+//               src={postInformation.imgURL}
+//               alt="post"
+//               width="0"
+//               height="0"
+//               sizes="(min-width: 40em) 40vw, 100vw"
+//             />
+//           </div>
+//         ) : null}
+//         <div className={`flex ${postInformation.imgURL ? 'h-[50%]' : 'h-[80%]'} w-full flex-col bg-white dark:bg-[#1c1c1c] sm:h-full ${postInformation.imgURL ? 'lg:w-[50%]' : 'lg:w-full'}`}>
+//           <div className="flex items-center justify-start gap-3 border-b border-stone-200 py-2 px-4 dark:border-stone-700 sm:p-4">
 //             <Link href={postUserDetails.username}>
 //               <a>
 //                 {!postUserDetails.avatarURL ? (
@@ -388,16 +334,15 @@ export default PostPopUp;
 //               </a>
 //             </Link>
 //           </div>
-//           <div className="flex-grow overflow-y-auto bg-[#fafafa] text-sm dark:bg-[#131313] dark:[color-scheme:dark] ">
+//           <div className="flex-grow overflow-y-auto bg-[#fafafa] text-sm dark:bg-[#131313] dark:[color-scheme:dark] max-h-full">
 //             <div ref={chatBox}>
-//               {postInformation.comments.map((commentInfo, index) =>
+//               {postInformation.comments.map((commentInfo) =>
 //                 commentInfo.text === '' ? (
 //                   ''
 //                 ) : (
 //                   <div
-//                     // eslint-disable-next-line react/no-array-index-key
-//                     key={`post${index}`}
-//                     className="flex px-4 py-1 sm:p-4"
+//                     key={`${commentInfo.username}-${commentInfo.text}`}
+//                     className="flex px-4 py-2 sm:p-4"
 //                   >
 //                     <div className="flex-shrink-0">
 //                       <Link href={`/${commentInfo.username}`}>
@@ -425,7 +370,6 @@ export default PostPopUp;
 //                             <b>{commentInfo.username}</b>
 //                           </a>
 //                         </Link>
-
 //                         {` - ${commentInfo.text}`}
 //                       </p>
 //                       <p className="pt-1 text-xs text-[#a5a5a5]">
@@ -439,13 +383,13 @@ export default PostPopUp;
 //             <div ref={latestMessageRef} />
 //           </div>
 //           <div className="dark:bg-[#1c1c1c]">
-//             <div className="border-t border-stone-200 px-5 pt-1 pb-1 dark:border-stone-700 sm:pt-4">
+//             <div className="border-t border-stone-200 px-4 py-2 dark:border-stone-700 sm:px-5 sm:py-4">
 //               <div className="mb-1 flex gap-4 sm:mb-3">
 //                 {userNotifications?.likedPosts!.includes(
 //                   postInformation.postID
 //                 ) ? (
 //                   <button
-//                   aria-label='button'
+//                     aria-label="button"
 //                     id="unlike"
 //                     type="button"
 //                     onClick={(e) =>
@@ -458,14 +402,14 @@ export default PostPopUp;
 //                     }
 //                   >
 //                     <div className="group">
-//                       <div >
+//                       <div>
 //                         <HeartSVG fillColor="#a30844" height="24" width="24" />
 //                       </div>
 //                     </div>
 //                   </button>
 //                 ) : (
 //                   <button
-//                   aria-label='button'
+//                     aria-label="button"
 //                     id="like"
 //                     type="button"
 //                     onClick={(e) =>
@@ -478,15 +422,13 @@ export default PostPopUp;
 //                     }
 //                   >
 //                     <div className="group">
-//                       <div >
+//                       <div>
 //                         <HeartHollow />
 //                       </div>
 //                     </div>
 //                   </button>
 //                 )}
-//                 <CommentSVG
-                 
-//                 />
+//                 <CommentSVG />
 //               </div>
 //               <div className="flex text-sm">
 //                 <p>
@@ -513,7 +455,7 @@ export default PostPopUp;
 //                   </div>
 //                 )}
 //               </div>
-//               <p className=" text-xs text-[#a5a5a5] sm:pt-2">
+//               <p className="text-xs text-[#a5a5a5] sm:pt-2">
 //                 {new Date(
 //                   postInformation.createdAt.seconds * 1000
 //                 ).toDateString()}

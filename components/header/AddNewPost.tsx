@@ -145,7 +145,7 @@ const AddNewPost: React.FC<AddNewPostProps> = ({ setAddPost }) => {
                   </div>
                   <button
                   type='button'
-                    className="mt-4 px-3 py-1 text-center bg-blue-500 text-white rounded"
+                    className="jhgjgjgjj mt-4 px-3 py-1 text-center bg-blue-500 text-white rounded"
                     onClick={() => setTweetMode(true)}
                   >
                     Create Tweet

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Header from '../components/header/Header';
+
 
 
 const Gurudev = () => {
@@ -123,7 +123,7 @@ const Gurudev = () => {
         />
         {/* <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> */}
       </Head>
-      <Header page="Gurudev" />
+   
       <main>
         <div className="topper">
           {/* <div className="icon"></div> */}

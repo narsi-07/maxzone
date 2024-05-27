@@ -1137,7 +1137,7 @@ color: white;
   padding-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 
 }
 
@@ -1159,11 +1159,11 @@ color: rgb(255, 255, 255);
 
 
 @media (min-width: 767px) {
-  
 
   .jhgjg{
 
     height: 400px;
+
   }
   .jhvghjg{
     background:  #737676;
@@ -1233,7 +1233,6 @@ color: rgb(255, 255, 255);
   }
   
   .kghj{
-  
     width: 300px;
     margin-left: 38px;
     height: 60px;
