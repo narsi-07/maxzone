@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/firebase": "^3.2.1",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "browser-image-compression": "^2.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "firebase": "^9.23.0",

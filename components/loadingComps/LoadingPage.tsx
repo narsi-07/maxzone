@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Header from '../header/Header';
 
-
 function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
   return (
     <div
@@ -11,7 +10,7 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
           : 'items-center justify-center'
       } flex h-screen w-full dark:bg-[#131313]  dark:[color-scheme:dark]`}
     >
-      <Head>
+       <Head>
         <title>Dazzlone</title>
         <meta name="description" content="Dazzlone" />
         <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
@@ -27,11 +26,11 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
 
                     {/* LOADING IMAGE */}
 
-          <picture>
+        <picture>
           <img
-            className="h-0 w-0 opacity-0"
+            className="h-24 w-24 sm:h-auto"
             src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
-            alt="avatar"
+            alt="loading"
           />
         </picture>
       </div>
