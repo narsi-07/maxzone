@@ -45,7 +45,7 @@ const Login: NextPage = () => {
           
           <div className="jghjhgj flex  flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] py-10">
-            <h1 className='ikjhfyhi'>Dazzl<span className='kjgsdjh'>one</span></h1>
+            <h1 className='ikjhfyhi'>Free4<span className='kjgsdjh'>Talk</span></h1>
             </div>
             <div className="w-full px-5 sm:px-10">
               <form
