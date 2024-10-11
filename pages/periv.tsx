@@ -24,8 +24,6 @@ const posts: Post[] = [
 ];
 
 const App: React.FC = () => {
-    const [isTodayView, setIsTodayView] = useState(false);
-
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [isYearView, setIsYearView] = useState(false);
     const [monthsToShow, setMonthsToShow] = useState(1);
@@ -35,35 +33,31 @@ const App: React.FC = () => {
 
     useEffect(() => {
         renderCalendar();
-    }, [selectedDate, isYearView, monthsToShow, isWeekView,isTodayView]);
-
-   
+    }, [selectedDate, isYearView, monthsToShow, isWeekView]);
 
     const renderCalendar = () => {
         const year = selectedDate.getFullYear();
         const month = selectedDate.getMonth();
     
+        // Get the current date
+        const today = new Date();
+    
+        // Initialize date variables
         let startDate: Date;
         let endDate: Date;
     
+        // Calculate start and end dates based on the view
         if (isWeekView) {
-            startDate = new Date(selectedDate);
-            startDate.setDate(startDate.getDate() - startDate.getDay()); // Start of the week
-            endDate = new Date(startDate);
-            endDate.setDate(startDate.getDate() + 6); // End of the week
-        } else if (isTodayView) {
-            // "Today" view: Show a 30-day grid centered around today's date
-            const today = new Date();
-            const startOffset = -Math.floor(30 / 2);
-            startDate = new Date(today);
-            startDate.setDate(today.getDate() + startOffset);
-            endDate = new Date(today);
-            endDate.setDate(today.getDate() + 30 + startOffset - 1);
+            // Week view: calculate the range from today to 7 days later
+            startDate = today;
+            endDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 6); // 7 days range
         } else {
+            // Default view: show the entire month
             startDate = new Date(year, month, 1);
             endDate = new Date(year, month + monthsToShow, 0); // Last day of the selected month(s)
         }
     
+        // Manually format dates as "1 September 2024" - "30 September 2024"
         const formatDate = (date: Date) => {
             const day = date.getDate();
             const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
@@ -74,9 +68,11 @@ const App: React.FC = () => {
         const startFormatted = formatDate(startDate);
         const endFormatted = formatDate(endDate);
     
+        // Display the month-year and date range
         const monthYearDisplay = document.getElementById('monthYearDisplay') as HTMLSpanElement;
-        monthYearDisplay.innerHTML = 
-            `<span style="margin-right: 20px;">${startFormatted} - ${endFormatted}</span>`;
+        monthYearDisplay.innerHTML = `
+            <span style="margin-right: 20px;">${startFormatted} - ${endFormatted}</span>
+        `;
     
         const calendarGrid = document.getElementById('calendarGrid') as HTMLDivElement;
         const yearGrid = document.getElementById('yearGrid') as HTMLDivElement;
@@ -92,35 +88,11 @@ const App: React.FC = () => {
             renderYearView(year);
         } else if (isWeekView) {
             renderWeekView();
-        } else if (isTodayView) {
-            renderTodayView(startDate, endDate);
         } else {
             renderMultiMonthView(year, month);
         }
     };
     
-    const renderTodayView = (startDate: Date, endDate: Date) => {
-        const calendarGrid = document.getElementById('calendarGrid') as HTMLDivElement;
-        calendarGrid.innerHTML = '';
-    
-        const today = new Date();
-        const daysInRange: Date[] = [];
-        for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
-            daysInRange.push(new Date(date));
-        }
-    
-        daysInRange.forEach(date => {
-            const dateCell = createDateCell(date, false);
-            if (date.toDateString() === today.toDateString()) {
-                dateCell.style.backgroundColor = 'white'; // Highlight today
-            } else {
-                dateCell.style.backgroundColor = 'lightgreen'; // Other days
-            }
-            calendarGrid.appendChild(dateCell);
-        });
-    };
-    
-
 
     const renderMultiMonthView = (year: number, startMonth: number) => {
         const firstDayOfFirstMonth = new Date(year, startMonth, 1);
@@ -167,38 +139,22 @@ const App: React.FC = () => {
 
     const renderWeekView = () => {
         const calendarGrid = document.getElementById('calendarGrid') as HTMLDivElement;
-        calendarGrid.innerHTML = ''; // Clear previous content
-    
         const today = new Date();
-        const startDate = new Date(selectedDate);
-        
-        // Calculate the start of the week for the selected date
-        const weekStartDate = new Date(startDate);
-        weekStartDate.setDate(startDate.getDate() - startDate.getDay()); // Sunday as the start of the week
-    
-        // Calculate the end of the week (Saturday)
-        const weekEndDate = new Date(weekStartDate);
-        weekEndDate.setDate(weekStartDate.getDate() + 6);
-    
-        // Generate the calendar grid for the week
-        for (let i = 0; i < 7; i++) {
-            const date = new Date(weekStartDate);
-            date.setDate(weekStartDate.getDate() + i);
+        const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const date = new Date(today.getFullYear(), today.getMonth(), day);
             const dateCell = createDateCell(date, false);
-            
-            // Highlight the current week range
-            if (date >= weekStartDate && date <= weekEndDate) {
-                dateCell.style.backgroundColor = 'white'; // Highlight current week
+
+            if (day >= today.getDate() && day < today.getDate() + 7) {
+                dateCell.style.backgroundColor = 'white';
             } else {
-                dateCell.style.backgroundColor = 'rgb(211, 207, 207)'; // Other days
+                dateCell.style.backgroundColor = 'rgb(211, 207, 207)';
             }
-    
+
             calendarGrid.appendChild(dateCell);
         }
     };
-    
-    
-    
 
     const renderYearView = (year: number) => {
         const yearGrid = document.getElementById('yearGrid') as HTMLDivElement;
@@ -367,67 +323,50 @@ const App: React.FC = () => {
                     <span id="monthYearDisplay">June 2024</span>
                 </div>
                 <div>
-                <button id="prevBtn" onClick={() => {
-    if (isYearView) {
-        setSelectedDate(new Date(selectedDate.getFullYear() - 1, selectedDate.getMonth(), 1));
-    } else if (isWeekView) {
-        // Navigate back by one week
-        const newDate = new Date(selectedDate);
-        newDate.setDate(newDate.getDate() - 7);
-        setSelectedDate(newDate);
-    } else {
-        setSelectedDate(new Date(selectedDate.getFullYear(), selectedDate.getMonth() - monthsToShow, 1));
-    }
-    renderCalendar();
-}}>Back</button>
+                    <button id="prevBtn" onClick={() => {
+                        if (isYearView) {
+                            selectedDate.setFullYear(selectedDate.getFullYear() - 1);
+                        } else {
+                            selectedDate.setMonth(selectedDate.getMonth() - monthsToShow);
+                        }
+                        renderCalendar();
+                    }}>Back</button>
                     <div>
-                    <select id="monthViewSelect" className="active" onChange={(e) => {
-    const value = parseInt(e.target.value);
-    if (value === 0) {
-        setIsWeekView(true);
-        setIsTodayView(false);
-        setMonthsToShow(1);
-    } else if (value === -1) {
-        setIsTodayView(true);
-        setIsWeekView(false);
-        setMonthsToShow(1);
-    } else {
-        setIsWeekView(false);
-        setIsTodayView(false);
-        setMonthsToShow(value);
-    }
-    setIsYearView(value === 12);
-}}>
-    <option value="-1">Today</option>
-    <option value="0" selected>Week</option>
-    <option value="1">1 Month</option>
-    <option value="2">2 Months</option>
-    <option value="3">3 Months</option>
-    <option value="4">4 Months</option>
-    <option value="5">5 Months</option>
-    <option value="6">6 Months</option>
-    <option value="7">7 Months</option>
-    <option value="8">8 Months</option>
-    <option value="9">9 Months</option>
-    <option value="10">10 Months</option>
-    <option value="11">11 Months</option>
-    <option value="12">1 Year</option>
-</select>
-
+                        <select id="monthViewSelect" className="active" onChange={(e) => {
+                            const months = parseInt(e.target.value);
+                            if (months === 0) {
+                                setIsWeekView(true);
+                                setMonthsToShow(1);
+                            } else {
+                                setIsWeekView(false);
+                                setMonthsToShow(months);
+                            }
+                            setIsYearView(months === 12);
+                        }}>
+                            <option value="1" selected>Today</option>
+                            <option value="0">Week</option>
+                            <option value="1">1 Month</option>
+                            <option value="2">2 Months</option>
+                            <option value="3">3 Months</option>
+                            <option value="4">4 Months</option>
+                            <option value="5">5 Months</option>
+                            <option value="6">6 Months</option>
+                            <option value="7">7 Months</option>
+                            <option value="8">8 Months</option>
+                            <option value="9">9 Months</option>
+                            <option value="10">10 Months</option>
+                            <option value="11">11 Months</option>
+                            <option value="12">1 Year</option>
+                        </select>
                     </div>
                     <button id="nextBtn" onClick={() => {
-    if (isYearView) {
-        setSelectedDate(new Date(selectedDate.getFullYear() + 1, selectedDate.getMonth(), 1));
-    } else if (isWeekView) {
-        // Navigate forward by one week
-        const newDate = new Date(selectedDate);
-        newDate.setDate(newDate.getDate() + 7);
-        setSelectedDate(newDate);
-    } else {
-        setSelectedDate(new Date(selectedDate.getFullYear(), selectedDate.getMonth() + monthsToShow, 1));
-    }
-    renderCalendar();
-}}>Next</button>
+                        if (isYearView) {
+                            selectedDate.setFullYear(selectedDate.getFullYear() + 1);
+                        } else {
+                            selectedDate.setMonth(selectedDate.getMonth() + monthsToShow);
+                        }
+                        renderCalendar();
+                    }}>Next</button>
                 </div>
             </div>
             <div className="days-header" id="daysHeader">

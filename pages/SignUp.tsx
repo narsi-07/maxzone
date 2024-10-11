@@ -138,7 +138,7 @@ const SignUp: NextPage = () => {
               </form>
             </div>
           </div>
-          <div className="jhguytuv mt-2 flex  justify-center border border-stone-300 bg-white py-5 text-[14px]">
+          <div className="jhguytuv">
             <p>Have an account?</p>
             <button
               className="ml-1 font-semibold text-[Orange]"

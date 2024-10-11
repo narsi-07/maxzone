@@ -1041,7 +1041,14 @@ color: white;
 
 
 
- 
+.hgjhgjgj{
+  background: linear-gradient(to top left, #00d9ff, #0262d1);
+  
+}
+
+
+
+
 @media (max-width: 767px) {
   
   .jbjhj{
@@ -1051,7 +1058,7 @@ color: white;
   }
 .jghjhgj{
   height: 600px;
-  width: 330px;
+  width: 430px;
   background: linear-gradient(to top left, #18a3bca5, #0000005a);
   color: white;
   border: 2px solid white;
@@ -1063,21 +1070,20 @@ color: white;
 .jhguytuv{
   
    
-    width: 340px;
+    width: 430px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
     color: white;
     border: 2px solid white;
     border-radius: 20px;
   font-size: 20px;
-  margin-right: 33px;
   box-shadow: 2px 3px 44px black;
 }
 
 
 .gkhljkji{
   border-radius: 10px;
-  height: 40px;
-  width:290px;
+  height: 50px;
+  width: 390px;
 
   color: black;
   
@@ -1093,9 +1099,9 @@ color: white;
 
 .kghj{
   
-  width: 200px;
+  width: 300px;
   margin-left: 50px;
-  height: 40px;
+  height: 60px;
   border-radius: 19px;
   border: 3px solid white;
 
@@ -1140,7 +1146,7 @@ color: white;
 }
 .jhvghjg{
   background:  #737676;
-  margin-left: 50px;
+  margin-left: 64px;
 }
 
 }
@@ -1342,7 +1348,7 @@ object-fit:contain;
 .calendar-header div {
   display: flex;
   align-items: center;
-} 
+}
 
 .calendar-header div button,
 .calendar-header div select {
@@ -1397,7 +1403,6 @@ object-fit:contain;
   left: 5px;
   font-size: 12px; /* Adjusted font size */
   color: #333;
-
 }
 
 .calendar-grid div .platform-names {
@@ -1409,7 +1414,7 @@ object-fit:contain;
   font-weight: bold;
   font-size: 12px; /* Adjusted font size */
   color: #333;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(252, 227, 211);
 }
 
 .calendar-grid div .red-dot {
@@ -1451,9 +1456,8 @@ object-fit:contain;
 }
 
 .popup button {
-  padding: 0px 10px;
-  margin-top: 0px;
-
+  padding: 5px 10px;
+  margin-top: 10px;
 }
 
 .days-header {
@@ -1538,7 +1542,7 @@ object-fit:contain;
 .platform-names {
   position: absolute;
   bottom: 10px;
-  top: 30px; /* Adjusted top positioning */
+  top: 8px; /* Adjusted top positioning */
   border: none;
   left: 30px;
   font-weight: bold;
@@ -1547,209 +1551,4 @@ object-fit:contain;
   background-color: rgb(252, 227, 211);
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: 60px; /* Define a maximum height */
-}
-
-.platform-names::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
-.scrollable {
-  max-height: 100px; /* Adjust height as needed */
-  overflow-y: auto; /* Adds vertical scroll bar */
-}
-
-/* Ensure that the scheduled-posts div does not have scrolling functionality */
-.scheduled-posts {
-  /* Add styles here */
-}
-
-
-.platform-names {
-  position: absolute;
-  bottom: 10px;
-  top: 30px; /* Adjusted top positioning */
-  border: none;
-  left: 30px;
-  font-weight: bold;
-  font-size: 12px;
-  color: #333;
-  background-color: rgb(252, 227, 211);
-  overflow-y: auto; /* Enable vertical scrolling */
-  max-height: 60px; /* Define a maximum height */
-  border-radius: 10px; /* Border radius for rounded corners */
-  padding: 2px 5px; /* Padding around the text */
-}
-
-.platform-names::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
-.scrollable {
-  max-height: 100px; /* Adjust height as needed */
-  overflow-y: auto; /* Adds vertical scroll bar */
-}
-
-.platform-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  border-radius: 9px;
-
-}
-
-.platform-item img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  border-radius: 50%; /* Optional: Make the icon round */
-}
-
-.platform-item span {
-  font-size: 12px;
-  color: #333;
-}
-
-.scheduled-posts {
-  top: 60%;
-  display: flex;
-  align-items: center;
-  height: 45px;
-  background-color: rgb(252, 227, 211) !important;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 10px; /* Updated border-radius */
-}
-
-.scheduled-posts img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
-
-
-
-
-
-
-
-.calendar-grid div {
-  position: relative;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.calendar-grid div:hover {
-  background-color: rgb(249, 235, 221); /* Orange background on hover */
-}
-
-.share-button {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #fff;
-  visibility: hidden;
-}
-
-.calendar-grid div:hover .share-button {
-  visibility: visible; /* Show button on hover */
-}
-
-
-
-
-
-
-
-
-.share-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #fff;
-  visibility: hidden;
-}
-
-.calendar-grid div:hover .share-button {
-  visibility: visible; /* Show button on hover */
-}
-
-.share-button img {
-  width: 24px; /* Adjust size as needed */
-  height: 24px;
-  display: block; /* Ensure image is displayed as a block element */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hgjhgjgj{
-  background: linear-gradient(to top left, #00d9ff, #0262d1);
-  
-}
-.date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  cursor: pointer;
- 
-}
-
-.date.today {
-  background-color: white; /* Highlight today */
-}
-
-.date.other-day {
-  background-color: lightgreen; /* Other days */
-}
-
-.date:hover {
-  background-color: #d1d1d1;
 }

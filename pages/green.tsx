@@ -24,8 +24,6 @@ const posts: Post[] = [
 ];
 
 const App: React.FC = () => {
-    const [isTodayView, setIsTodayView] = useState(false);
-
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [isYearView, setIsYearView] = useState(false);
     const [monthsToShow, setMonthsToShow] = useState(1);
@@ -35,9 +33,10 @@ const App: React.FC = () => {
 
     useEffect(() => {
         renderCalendar();
-    }, [selectedDate, isYearView, monthsToShow, isWeekView,isTodayView]);
+    }, [selectedDate, isYearView, monthsToShow, isWeekView]);
 
-   
+    const [isTodayView, setIsTodayView] = useState(false);
+
 
     const renderCalendar = () => {
         const year = selectedDate.getFullYear();
@@ -399,7 +398,7 @@ const App: React.FC = () => {
     setIsYearView(value === 12);
 }}>
     <option value="-1">Today</option>
-    <option value="0" selected>Week</option>
+    <option value="0">Week</option>
     <option value="1">1 Month</option>
     <option value="2">2 Months</option>
     <option value="3">3 Months</option>
