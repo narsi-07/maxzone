@@ -1296,3 +1296,150 @@ color: rgb(255, 255, 255);
 .hvjgjg{
 object-fit:contain;
 }
+
+
+
+
+
+
+.backbuttonmusic{
+  background: linear-gradient(to top left, #117c86, #07084f);
+  height: 50px;
+  width: 200px;
+position: absolute;
+bottom: 17px;
+left: 13px;
+
+border-radius: 14px;
+
+text-align: center;
+color: white;
+font-size:30px;
+ 
+  
+}
+
+
+.posebuttonmusic{
+  background: linear-gradient(to top left, #117c86, #07084f);
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translate(-50%);
+width: 70px;
+text-align: center;
+border-radius: 5px;
+color: white;
+font-size: 20px;
+
+ 
+}
+
+.nextbuttonsong{
+  background: linear-gradient(to top left, #117c86, #07084f);
+  height: 50px;
+  width: 200px;
+position: absolute;
+bottom: 17px;
+right: 13px;
+
+border-radius: 14px;
+
+text-align: center;
+color: white;
+font-size:30px;
+ 
+  
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+
+
+.blackwebnarsi{
+position: absolute;
+margin-bottom: 640px;
+top: 10;
+height: 100px;
+width: 500px;
+background-color: rgb(0, 0, 0);
+cursor: 'pointer'
+
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .backbuttonmusic{
+    background: linear-gradient(to top left, #117c86, #07084f);
+    height: 50px;
+    width: 120px;
+  position: absolute;
+  bottom: 20px;
+  left: 13px;
+  
+  border-radius: 14px;
+  
+  text-align: center;
+  color: white;
+  font-size:20px;
+  
+   
+    
+  }
+  
+  
+  .posebuttonmusic{
+    background: linear-gradient(to top left, #117c86, #07084f);
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  
+   
+  }
+  
+  .nextbuttonsong{
+    background: linear-gradient(to top left, #117c86, #07084f);
+    height: 50px;
+    width: 120px;
+  position: absolute;
+  bottom: 17px;
+  right: 12px;
+  text-align: center;
+  
+  border-radius: 14px;
+  
+  text-align: center;
+  color: white;
+  font-size:30px;
+   
+    
+  }
+
+}
