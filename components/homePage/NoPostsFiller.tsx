@@ -57,7 +57,8 @@ function NoPostsFiller() {
               
                   <h3 className="people__name">Dazzlone  <VerificationBadge/></h3>
                   <p className="people__position">Offica account</p>
-                  <p className="people__desc"></p>
+                  <p className="people__desc" />
+
 
                 </div>
                 <div className="people__btn">
