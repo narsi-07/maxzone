@@ -607,7 +607,7 @@ main .msgs_cont .rchat {
 
 
 .hdfkhdks{
-margin-left: 29px;
+margin-left: 20px;
 }
 
 .hdfkhdksss {
@@ -1035,7 +1035,10 @@ color: white;
 
 
 
-
+.poweredbydazzlone{
+  margin-left: 37px;
+  font-size: 10px;
+}
 
 
 
@@ -1058,7 +1061,7 @@ color: white;
   }
 .jghjhgj{
   height: 600px;
-  width: 430px;
+  width: 358px;
   background: linear-gradient(to top left, #18a3bca5, #0000005a);
   color: white;
   border: 2px solid white;
@@ -1070,7 +1073,7 @@ color: white;
 .jhguytuv{
   
    
-    width: 430px;
+    width: 360px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
     color: white;
     border: 2px solid white;
@@ -1082,9 +1085,8 @@ color: white;
 
 .gkhljkji{
   border-radius: 10px;
-  height: 50px;
-  width: 390px;
-
+  height: 42px;
+  width: 309px;
   color: black;
   
 }
@@ -1099,10 +1101,10 @@ color: white;
 
 .kghj{
   
-  width: 300px;
-  margin-left: 50px;
-  height: 60px;
-  border-radius: 19px;
+  width: 231px;
+  margin-left: 40px;
+  height: 45px;
+  border-radius: 18px;
   border: 3px solid white;
 
 
@@ -1146,7 +1148,7 @@ color: white;
 }
 .jhvghjg{
   background:  #737676;
-  margin-left: 64px;
+  margin-left: 43px;
 }
 
 }
@@ -1193,7 +1195,7 @@ color: white;
   .jghjhgj{
     margin-left: 680px;
     height: 500px;
-    width: 460px;
+    width: 458px;
     background: linear-gradient(to top left, #18a3bca5, #0000005a);
     color: white;
     border: 2px solid white;
