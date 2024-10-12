@@ -1378,24 +1378,23 @@ font-size:30px;
 
 
 
-
-  .backbuttonmusic{
+  .backbuttonmusic {
     background: linear-gradient(to top left, #117c86, #07084f);
-    height: 50px;
+    height: 30px;
     width: 100px;
-  position: absolute;
-  bottom:  17px;
-  left: 13px;
-  
-  border-radius: 14px;
-  
-  text-align: center;
-  color: white;
-  font-size:19px;
-  
-   
+    position: absolute;
+    bottom: 17px;
+    left: 13px;
+    border-radius: 14px;
     
+    display: flex;           /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    
+    color: white;
+    font-size: 11px;
   }
+  
   
   
   .posebuttonmusic{
@@ -1404,29 +1403,34 @@ font-size:30px;
   bottom: 19px;
   left: 50%;
   transform: translate(-50%);
-  width: 70px;
+  width: 50px;
   text-align: center;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
-  
+  font-size: 11px;
+  height: 40px;
+  display: flex;           /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
    
   }
   
   .nextbuttonsong{
     background: linear-gradient(to top left, #117c86, #07084f);
-    height: 50px;
+    height: 30px;
     width: 95px;
   position: absolute;
   bottom: 17px;
   right: 12px;
   text-align: center;
-  
-  border-radius: 14px;
+  display: flex;           /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  border-radius: 6px;
   
 
   color: white;
-  font-size:19px;
+  font-size:11px;
    
     
   }
