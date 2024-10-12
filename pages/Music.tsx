@@ -49,7 +49,11 @@ function App() {
     setIsPlaying((prevState) => {
       const newState = !prevState;
       if (playerRef.current) {
-        newState ? playerRef.current.playVideo() : playerRef.current.pauseVideo();
+        if (newState) {
+          playerRef.current.playVideo();
+        } else {
+          playerRef.current.pauseVideo();
+        }
       }
       return newState;
     });
@@ -117,7 +121,7 @@ function App() {
       disablekb: 1,
       playsinline: 1,
       start: 0,
-      origin: typeof window !== "undefined" ? window.location.origin : "",
+      origin: typeof window !== 'undefined' ? window.location.origin : '',
     },
   };
 
@@ -162,7 +166,7 @@ function App() {
 
       {/* Like Button & Count */}
       <div className='blackwebnarsi'>
-        <button onClick={toggleLike}>
+        <button type='button' onClick={toggleLike}>
           {isLiked ? 'Unlike' : 'Like'} {likesCounts[currentSongIndex] || 0}
         </button>
       </div>
