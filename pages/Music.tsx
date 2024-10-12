@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import YouTube from 'react-youtube';
-import { FaHeart } from 'react-icons/fa';
 
 // Type for the YouTube player instance
 interface YouTubePlayer {
@@ -40,7 +39,7 @@ function getRandomIndex() {
 function App() {
   const [currentSongIndex, setCurrentSongIndex] = useState(getRandomIndex());
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(false); // Using isLiked now
   const [likesCounts, setLikesCounts] = useState<{ [key: number]: number }>({});
   
   // Specify the type of the playerRef
@@ -162,9 +161,10 @@ function App() {
       </div>
 
       {/* Like Button & Count */}
-      <div className='blackwebnarsi' >
-      
-      
+      <div className='blackwebnarsi'>
+        <button onClick={toggleLike}>
+          {isLiked ? 'Unlike' : 'Like'} {likesCounts[currentSongIndex] || 0}
+        </button>
       </div>
 
       {/* Play/Pause Button */}
@@ -177,7 +177,6 @@ function App() {
             height: 50,
             borderRadius: '50%',
             border: 'none',
-        
             cursor: 'pointer',
           }}
         >
@@ -195,7 +194,6 @@ function App() {
             height: 50,
             borderRadius: '50%',
             border: 'none',
-         
             cursor: 'pointer',
             marginLeft: 10,
           }}
@@ -214,7 +212,6 @@ function App() {
             height: 50,
             borderRadius: '50%',
             border: 'none',
-          
             cursor: 'pointer',
             marginRight: 10,
           }}
