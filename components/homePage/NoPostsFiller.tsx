@@ -61,7 +61,7 @@ function NoPostsFiller() {
 
                 </div>
                 <div className="people__btn">
-  <Link href="/narsijangid">
+  <Link href="/dazzlone">
     <a>Follow</a>
   </Link>
 </div>
@@ -92,7 +92,7 @@ function NoPostsFiller() {
 
                 </div>
                 <div className="people__btn">
-  <Link href="/narsijangid">
+  <Link href="/free4talk">
     <a>Follow</a>
   </Link>
 </div>
