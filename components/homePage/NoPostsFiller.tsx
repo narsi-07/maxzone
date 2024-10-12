@@ -45,7 +45,7 @@ function NoPostsFiller() {
             <div className="swiper-slide">
               <div className="people__card">
                 <div className="people__image">
-                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxulCUpb5pPBpU6SZvzuuixvbEgi8CIRIQ1_KREwW6ysXOYC2Y075ZijdZ_1FdYdzBsovQuSschZMgOn1SwyI9ncW6inHqLPy1a2RWpmfLj-mPnZjSC8MkRtoij5fmYC8MZgeEKVdN-Sr42QES8Vb_AhJR2qg0Q5rNfFsrcd9JjVQAabic_QYqzbZm94A/s320/Dazzlone.png" alt="大西 真裕" />
+                  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEizRzmsA6-km8m8PvXZo5iKjG7OLdg-5UlA9hnI4-dwb7f6vnn08Uya9NdYmDSQA89ADx7cSNUHF0PrS5utIA69O2jM1AjzIcBMEJTV5JtCzD4TbZKa0fOWemAKq0A8RrMfsOtSguXhuV0SoYbyFpKqi9plizkhDPR0EOstV_CZnKaAijaPge7musXE2oY" alt="大西 真裕" />
                 </div>
                 <div className="people__info">
                 <ul className="people__social">
@@ -56,8 +56,8 @@ function NoPostsFiller() {
 
               
                   <h3 className="people__name">Dazzlone  <VerificationBadge/></h3>
-                  <p className="people__position">Official</p>
-                  <p className="people__desc">.......</p>
+                  <p className="people__position">Official account </p>
+                  <p className="people__desc"></p>
 
                 </div>
                 <div className="people__btn">
@@ -88,7 +88,7 @@ function NoPostsFiller() {
               
                   <h3 className="people__name">Free4talk<VerificationBadge/></h3>
                   <p className="people__position">Support</p>
-                  <p className="people__desc">social network</p>
+                  <p className="people__desc">The biggest social network in the world</p>
 
                 </div>
                 <div className="people__btn">
