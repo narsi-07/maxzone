@@ -1362,18 +1362,7 @@ font-size:30px;
 
 
 
-.blackwebnarsi{
-position: absolute;
-margin-bottom: 640px;
-top: 10;
-height: 100px;
-width: 500px;
-background-color: rgb(0, 0, 0);
-cursor: 'pointer'
 
-
- 
-}
 
 
 
@@ -1393,16 +1382,16 @@ cursor: 'pointer'
   .backbuttonmusic{
     background: linear-gradient(to top left, #117c86, #07084f);
     height: 50px;
-    width: 120px;
+    width: 100px;
   position: absolute;
-  bottom: 20px;
+  bottom:  17px;
   left: 13px;
   
   border-radius: 14px;
   
   text-align: center;
   color: white;
-  font-size:20px;
+  font-size:19px;
   
    
     
@@ -1427,7 +1416,7 @@ cursor: 'pointer'
   .nextbuttonsong{
     background: linear-gradient(to top left, #117c86, #07084f);
     height: 50px;
-    width: 120px;
+    width: 95px;
   position: absolute;
   bottom: 17px;
   right: 12px;
@@ -1435,9 +1424,9 @@ cursor: 'pointer'
   
   border-radius: 14px;
   
-  text-align: center;
+
   color: white;
-  font-size:30px;
+  font-size:19px;
    
     
   }
