@@ -12,9 +12,9 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
       } flex h-screen w-full dark:bg-[#131313]  dark:[color-scheme:dark]`}
     >
       <Head>
-        <title>Dazzlone</title>
-        <meta name="description" content="Dazzlone" />
-        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
+        <title>Free4Talk</title>
+        <meta name="description" content="Free4talk" />
+        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
       </Head>
       {checkingUserRoute ? <Header page="Profile" /> : ''}
       <div
@@ -30,7 +30,7 @@ function LoadingPage({ checkingUserRoute }: { checkingUserRoute: boolean }) {
           <picture>
           <img
             className="h-0 w-0 opacity-0"
-            src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png"
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E"
             alt="avatar"
           />
         </picture>

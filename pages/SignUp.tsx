@@ -36,7 +36,7 @@ const SignUp: NextPage = () => {
     return (
       <div className="flex h-[100vh] w-full items-center justify-center dark:bg-[#131313]">
         <picture>
-          <img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="loading" />
+          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" alt="loading" />
         </picture>
       </div>
     );
@@ -46,14 +46,14 @@ const SignUp: NextPage = () => {
     <div style={{ backgroundColor: 'black' }}>
     <div>
       <Head>
-        <title>Dazzlone • Sign up</title>
+        <title>Free4talk • Sign up</title>
       
-        <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
-<meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
+        <meta name="description" content="Free4talk is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
+<meta name="keywords" content="Social networking platform,c Free4talk app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
 <meta name="author" content="Narsi jangid"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
+        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
       </Head>
       <div style={{ backgroundColor: 'black' }} className="jbjhj flex min-h-[100vh]  items-center justify-center bg-[#fafafa]">
         <div>

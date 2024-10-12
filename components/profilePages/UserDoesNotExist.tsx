@@ -9,9 +9,9 @@ export default function UserDoesNotExist({
   return (
     <div className="h-[100vh] w-full overflow-y-scroll dark:bg-[#131313] dark:text-slate-100">
       <Head>
-        <title>Profile • dazzlone photos and videos</title>
+        <title>Profile • Free4talk photos and videos</title>
         <meta name="description" content="Instagram Clone" />
-        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
+        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
       </Head>
       <Header page="Profile" />
       <div className="items-top flex h-full w-full justify-center">
