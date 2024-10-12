@@ -127,7 +127,7 @@ const Gurudev = () => {
       <main>
         <div className="topper">
           {/* <div className="icon"></div> */}
-          <span  className='dazzle'><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" alt="" />Free4talk <div className='gurudevtick'>  <svg
+          <span  className='dazzle'><img src="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" alt="" />Dazzlone <div className='gurudevtick'>  <svg
       version="1.1"
       width="20"
       height="20"
