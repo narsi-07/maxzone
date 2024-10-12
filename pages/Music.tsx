@@ -19,12 +19,159 @@ const songs = [
     artist: 'Ozbi',
     cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
   },
+
+  
+
   {
+
+
     youtubeId: 'XO8wew38VM8',
     displayName: 'Yıldız Tozu',
     artist: 'Ozbi',
     cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
   },
+
+  {
+    youtubeId: 'bb_6axGwAx8',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+
+
+
+
+
+  {
+    youtubeId: 'yBTAJ-zVw0E',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: 'f7o-pe0kQt4',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: '6FSKHEvAJZE',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: '-XiOdrNxbrY',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+  {
+    youtubeId: 'CXkiLzW82WU',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+  {
+    youtubeId: 'SLx4dzbUFzs',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: 'mMs_u1V3HSk',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+
+  
+
+
+  {
+    youtubeId: '66X_Tq9KozM',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: 'RvoAYtqv7cU',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+  {
+    youtubeId: 'S4SuqK6JTrY',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+  {
+    youtubeId: 'izXDQ9qHIdg',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: 'YxWlaYCA8MU',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+  {
+    youtubeId: 'AFTJXL5pcXw',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+  {
+    youtubeId: 'kkvesKJmRwU',
+    displayName: 'Yıldız Tozu',
+    artist: 'Ozbi',
+    cover: 'https://images.genius.com/ee202c6f724ffd4cf61bd01a205eeb47.1000x1000x1.jpg',
+  },
+
+
+
+
+
+
+
   // Add more songs here
 ];
 
