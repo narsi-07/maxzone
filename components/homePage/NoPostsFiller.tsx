@@ -56,9 +56,8 @@ function NoPostsFiller() {
 
               
                   <h3 className="people__name">Dazzlone  <VerificationBadge/></h3>
-                  <p className="people__position">Offica account</p>
-                  <p className="people__desc" />
-
+                  <p className="people__position">Official account</p>
+                  <p className="people__desc">Ai Teck Industries - Innovating the Future with Cutting-Edge AI Solutions for Global Impact</p>
 
                 </div>
                 <div className="people__btn">
