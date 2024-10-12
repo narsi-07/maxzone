@@ -30,7 +30,7 @@ function NoPostsFiller() {
                   </ul>
                   <h3 className="people__name">Narsi Jangid <VerificationBadge /></h3>
                   <p className="people__position">Co-founder and CEO</p>
-                  <p className="people__desc">Narsi Jangid, Dazzlone's CEO, drives innovative strategies for unparalleled success.</p>
+                  <p className="people__desc">Narsi Jangid, Dazzlone CEO, drives innovative strategies for unparalleled success.</p>
                 </div>
                 <div className="people__btn">
                   <Link href="/narsijangid" passHref>
