@@ -36,7 +36,7 @@ const Login: NextPage = () => {
 <meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
 <meta name="author" content="Narsi jangid"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" href="https://imagizer.imageshack.com/img922/3706/Q1vJOp.png" />
+        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
       </Head>
       <div >
       <div style={{ backgroundColor: 'black' }} className="jbjhj flex  w-full items-center justify-center ">
