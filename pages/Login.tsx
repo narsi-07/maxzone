@@ -30,14 +30,25 @@ const Login: NextPage = () => {
 
   return (
     <div className='kjhkjhk' style={{ backgroundColor: 'black' }}>
-      <Head>
-        <title>Free4talk</title>
-             <meta name="description" content="Dazzlone is the ultimate social networking platform where you can connect with friends, share photos, videos, and stay connected with your loved ones. Join our online community and discover new people while interacting with others in a vibrant and engaging environment."/>
-<meta name="keywords" content="Social networking platform,c Dazzlone app, Connect with friends, Share photos and videos, Social media network, Stay connected, Online community, Discover new people,Video call with strangers, Chat with new people, Random video calls, Connect with strangers"/>
-<meta name="author" content="Narsi jangid"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
-      </Head>
+     <head>
+    <title>Free4Talk - Chat with Strangers Worldwide | Free4talk.xyz</title>
+    <meta name="description" content="Free4Talk is the best platform to chat with strangers around the world. Connect instantly, share experiences, and make new friends on free4talk.xyz." />
+    <meta name="keywords" content="Free4talk,free4talk speaking, chat with strangers, online chat, random video calling, connect with people worldwide" />
+    <meta name="author" content="Narsi Jangid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Free4Talk - Connect & Chat with Strangers Worldwide" />
+    <meta property="og:description" content="Join Free4Talk to chat and make friends with strangers worldwide. Instant connections and real-time conversations." />
+    <meta property="og:url" content="https://free4talk.xyz" />
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Free4Talk" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free4Talk - Chat with Strangers Worldwide" />
+    <meta name="twitter:description" content="Chat with strangers around the globe on Free4Talk. Instant, free, and anonymous conversations." />
+    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEhPOBDFKLDBOkT9QWKq29HqXVdODvybjPba5bT4fVThHr5XLI8fF-LJW3tzFtQbcmvQFTx7-1DdnTWnPcWWwpxoKfFcX8L0eu_xmReoWHIk0bi5SBrbvemyOobf07DmaEB6cCQbCwrZX2tC5gTu0LGqLYUeQr1g1KLMYRhVutYu5k14FTPhK_xSujWnJ8E" />
+</head>
+
       <div >
       <div style={{ backgroundColor: 'black' }} className="jbjhj flex  w-full items-center justify-center ">
      
@@ -46,7 +57,7 @@ const Login: NextPage = () => {
           <div className="jghjhgj flex  flex-col items-center justify-center border border-stone-300 bg-white">
             <div className="h-auto w-[175px] py-10">
             <h1 className='ikjhfyhi'>Free4<span className='kjgsdjh'>Talk</span></h1>
-            <p className='poweredbydazzlone'>powered by - Dazzlone</p>
+            <p className='poweredbydazzlone'>Powered by - Dazzlone</p>
             </div>
             <div className="w-full px-5 sm:px-10">
               <form
